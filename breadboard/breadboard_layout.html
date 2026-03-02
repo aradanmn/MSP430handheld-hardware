@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSP430G2553 Game Boy - Breadboard Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .breadboard-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        svg {
+            border: 2px solid #ccc;
+            background-color: #1a1a2e;
+        }
+        .connection-table {
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .legend {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legend-box {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            border: 1px solid #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MSP430G2553 Game Boy - Breadboard Layout</h1>
+        
+        <div class="breadboard-section">
+            <svg width="1200" height="950" viewBox="0 0 1200 950">
+                <!-- Breadboard background -->
+                <rect width="1200" height="950" fill="#1a1a2e"/>
+                
+                <!-- Power rail header -->
+                <text x="600" y="25" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">Power Rails (VCC Red / GND Black)</text>
+                
+                <!-- VCC Red power rail top -->
+                <rect x="10" y="40" width="1180" height="15" fill="#cc0000" opacity="0.7"/>
+                <text x="20" y="52" fill="#ffffff" font-size="12" font-weight="bold">VCC</text>
+                
+                <!-- GND Black power rail top -->
+                <rect x="10" y="60" width="1180" height="15" fill="#000000" opacity="0.7"/>
+                <text x="20" y="72" fill="#ffffff" font-size="12" font-weight="bold">GND</text>
+                
+                <!-- Panel labels -->
+                <text x="75" y="110" text-anchor="middle" fill="#888888" font-size="13" font-weight="bold">PANEL A</text>
+                <text x="300" y="110" text-anchor="middle" fill="#888888" font-size="13" font-weight="bold">PANEL B</text>
+                <text x="525" y="110" text-anchor="middle" fill="#888888" font-size="13" font-weight="bold">PANEL C</text>
+                <text x="750" y="110" text-anchor="middle" fill="#888888" font-size="13" font-weight="bold">PANEL D</text>
+                <text x="950" y="110" text-anchor="middle" fill="#888888" font-size="13" font-weight="bold">PANEL E</text>
+                
+                <!-- Row numbers (left side) -->
+                <g id="row-labels-left" font-size="10" fill="#666666">
+                    <text x="5" y="135">1</text>
+                    <text x="5" y="160">5</text>
+                    <text x="5" y="210">10</text>
+                    <text x="5" y="260">15</text>
+                    <text x="5" y="310">20</text>
+                    <text x="5" y="360">25</text>
+                    <text x="5" y="410">30</text>
+                    <text x="5" y="460">35</text>
+                    <text x="5" y="510">40</text>
+                    <text x="5" y="560">45</text>
+                    <text x="5" y="610">50</text>
+                    <text x="5" y="660">55</text>
+                </g>
+                
+                <!-- Tie point grid pattern (simplified for clarity) -->
+                <g id="tie-points" stroke="#444444" stroke-width="0.5">
+                    <!-- Panel A -->
+                    <circle cx="40" cy="130" r="1.5" fill="#444444"/>
+                    <circle cx="70" cy="130" r="1.5" fill="#444444"/>
+                    <circle cx="110" cy="130" r="1.5" fill="#444444"/>
+                    
+                    <!-- Representative grid - sparse for display -->
+                    <circle cx="40" cy="160" r="1.5" fill="#444444"/>
+                    <circle cx="40" cy="210" r="1.5" fill="#444444"/>
+                    <circle cx="40" cy="260" r="1.5" fill="#444444"/>
+                    <circle cx="40" cy="310" r="1.5" fill="#444444"/>
+                    <circle cx="40" cy="360" r="1.5" fill="#444444"/>
+                    <circle cx="70" cy="160" r="1.5" fill="#444444"/>
+                    <circle cx="70" cy="210" r="1.5" fill="#444444"/>
+                    <circle cx="70" cy="260" r="1.5" fill="#444444"/>
+                    <circle cx="70" cy="310" r="1.5" fill="#444444"/>
+                    <circle cx="70" cy="360" r="1.5" fill="#444444"/>
+                </g>
+                
+                <!-- OLED Module (Panel B, rows 5-8, left) -->
+                <rect x="220" y="140" width="80" height="50" fill="#20a39f" opacity="0.8" stroke="#00ffff" stroke-width="2"/>
+                <text x="260" y="168" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">DFR0650</text>
+                <text x="260" y="182" text-anchor="middle" fill="#ffffff" font-size="9">OLED Module</text>
+                <!-- Pin labels -->
+                <text x="225" y="148" fill="#ffff00" font-size="8">VCC</text>
+                <text x="225" y="162" fill="#000000" font-size="8">GND</text>
+                <text x="225" y="176" fill="#00ff00" font-size="8">SCL</text>
+                <text x="225" y="190" fill="#00ff00" font-size="8">MOSI</text>
+                
+                <!-- Bourns Volume Pot (Panel A, rows 8-10, left) -->
+                <rect x="25" y="215" width="50" height="45" fill="#8B6F47" opacity="0.8" stroke="#D4A574" stroke-width="2"/>
+                <text x="50" y="240" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">VOL</text>
+                <text x="50" y="253" text-anchor="middle" fill="#ffffff" font-size="8">Pot</text>
+                
+                <!-- Bourns Linear Pot (Panel D, rows 8-10, right) -->
+                <rect x="730" y="215" width="50" height="45" fill="#8B6F47" opacity="0.8" stroke="#D4A574" stroke-width="2"/>
+                <text x="755" y="240" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">ADC</text>
+                <text x="755" y="253" text-anchor="middle" fill="#ffffff" font-size="8">Pot</text>
+                
+                <!-- SN74HC165N Shift Register (Panel A, rows 20-27) -->
+                <rect x="15" y="310" width="100" height="85" fill="#9d4edd" opacity="0.8" stroke="#bb86fc" stroke-width="2"/>
+                <text x="65" y="340" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">SN74HC165N</text>
+                <text x="65" y="355" text-anchor="middle" fill="#ffffff" font-size="9">Shift Register</text>
+                <!-- Left pins -->
+                <text x="20" y="318" fill="#ffff00" font-size="8">SH/LD</text>
+                <text x="20" y="332" fill="#ffff00" font-size="8">CLK</text>
+                <text x="20" y="346" fill="#ffff00" font-size="8">E</text>
+                <text x="20" y="360" fill="#ffff00" font-size="8">F-H</text>
+                <text x="20" y="374" fill="#ffff00" font-size="8">QH</text>
+                <text x="20" y="388" fill="#000000" font-size="8">GND</text>
+                <!-- Right pins -->
+                <text x="110" y="318" fill="#00ff00" font-size="8">QH</text>
+                <text x="110" y="332" fill="#ffff00" font-size="8">A-D</text>
+                <text x="110" y="374" fill="#ff0000" font-size="8">VCC</text>
+                
+                <!-- LM386N-1 Audio Amp (Panel D, rows 20-23) -->
+                <rect x="720" y="310" width="80" height="60" fill="#ff8c42" opacity="0.8" stroke="#ffb347" stroke-width="2"/>
+                <text x="760" y="340" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">LM386N-1</text>
+                <text x="760" y="354" text-anchor="middle" fill="#ffffff" font-size="9">Audio Amp</text>
+                <!-- Left pins -->
+                <text x="725" y="318" fill="#ffff00" font-size="8">GAIN(1)</text>
+                <text x="725" y="332" fill="#ffff00" font-size="8">+IN(3)</text>
+                <text x="725" y="360" fill="#000000" font-size="8">GND(4)</text>
+                <!-- Right pins -->
+                <text x="795" y="318" fill="#ffff00" font-size="8">OUT(5)</text>
+                <text x="795" y="332" fill="#ff0000" font-size="8">VS(6)</text>
+                <text x="795" y="360" fill="#ffff00" font-size="8">GAIN(8)</text>
+                
+                <!-- MSP-EXP430G2 LaunchPad (rows 25-34, centered) -->
+                <!-- Left header J1 (Panel B right) -->
+                <rect x="265" y="330" width="45" height="100" fill="#0066cc" opacity="0.85" stroke="#00aaff" stroke-width="2"/>
+                <text x="287" y="360" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">J1</text>
+                <text x="287" y="410" text-anchor="middle" fill="#ffffff" font-size="8">LaunchPad</text>
+                <!-- J1 pin labels -->
+                <text x="270" y="343" fill="#ffff00" font-size="7">VCC</text>
+                <text x="270" y="358" fill="#ffff00" font-size="7">P1.0</text>
+                <text x="270" y="373" fill="#ffff00" font-size="7">P1.1</text>
+                <text x="270" y="388" fill="#ffff00" font-size="7">P1.2</text>
+                <text x="270" y="403" fill="#ffff00" font-size="7">P1.3</text>
+                <text x="270" y="418" fill="#ffff00" font-size="7">RST</text>
+                
+                <!-- Right header J2 (Panel C left) -->
+                <rect x="390" y="330" width="45" height="100" fill="#0066cc" opacity="0.85" stroke="#00aaff" stroke-width="2"/>
+                <text x="412" y="360" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">J2</text>
+                <!-- J2 pin labels -->
+                <text x="398" y="343" fill="#ffff00" font-size="7">GND</text>
+                <text x="398" y="358" fill="#ffff00" font-size="7">P1.6</text>
+                <text x="398" y="373" fill="#ffff00" font-size="7">P1.7</text>
+                <text x="398" y="388" fill="#ffff00" font-size="7">P2.0</text>
+                <text x="398" y="403" fill="#ffff00" font-size="7">P2.1</text>
+                <text x="398" y="418" fill="#ffff00" font-size="7">VCC</text>
+                
+                <!-- LiPo Charger (Panel C, rows 5-8, right) -->
+                <rect x="445" y="140" width="80" height="50" fill="#ff4444" opacity="0.8" stroke="#ff6666" stroke-width="2"/>
+                <text x="485" y="168" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">LiPo Chg</text>
+                <text x="485" y="182" text-anchor="middle" fill="#ffffff" font-size="9">Adafruit 4410</text>
+                
+                <!-- RC Filter (Panel C, row 38) -->
+                <rect x="450" y="490" width="70" height="40" fill="#888888" opacity="0.8" stroke="#aaaaaa" stroke-width="2"/>
+                <text x="485" y="515" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">RC Filter</text>
+                <text x="485" y="527" text-anchor="middle" fill="#ffffff" font-size="8">1KΩ+0.1µF</text>
+                
+                <!-- Decoupling caps (Panel C, rows 40 & 42) -->
+                <rect x="450" y="510" width="30" height="25" fill="#888888" opacity="0.8" stroke="#aaaaaa" stroke-width="1"/>
+                <text x="465" y="527" text-anchor="middle" fill="#ffffff" font-size="8">C1</text>
+                <rect x="490" y="510" width="30" height="25" fill="#888888" opacity="0.8" stroke="#aaaaaa" stroke-width="1"/>
+                <text x="505" y="527" text-anchor="middle" fill="#ffffff" font-size="8">C2</text>
+                
+                <!-- Pull-up resistors (Panel B, rows 40-47) -->
+                <g id="pullups">
+                    <rect x="260" y="510" width="25" height="20" fill="#999999" opacity="0.7" stroke="#bbbbbb" stroke-width="1"/>
+                    <text x="272" y="523" text-anchor="middle" fill="#ffffff" font-size="7">10K</text>
+                    <rect x="260" y="540" width="25" height="20" fill="#999999" opacity="0.7" stroke="#bbbbbb" stroke-width="1"/>
+                    <text x="272" y="553" text-anchor="middle" fill="#ffffff" font-size="7">10K</text>
+                    <rect x="260" y="570" width="25" height="20" fill="#999999" opacity="0.7" stroke="#bbbbbb" stroke-width="1"/>
+                    <text x="272" y="583" text-anchor="middle" fill="#ffffff" font-size="7">10K</text>
+                    <rect x="260" y="600" width="25" height="20" fill="#999999" opacity="0.7" stroke="#bbbbbb" stroke-width="1"/>
+                    <text x="272" y="613" text-anchor="middle" fill="#ffffff" font-size="7">10K</text>
+                </g>
+                
+                <!-- Tactile Buttons 1-4 (Panel A, rows 40-55) -->
+                <g id="buttons-left">
+                    <rect x="25" y="510" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="35" y="522" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B1</text>
+                    <rect x="25" y="545" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="35" y="557" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B2</text>
+                    <rect x="25" y="580" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="35" y="592" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B3</text>
+                    <rect x="25" y="615" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="35" y="627" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B4</text>
+                </g>
+                
+                <!-- Tactile Buttons 5-8 (Panel D, rows 40-55) -->
+                <g id="buttons-right">
+                    <rect x="760" y="510" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="770" y="522" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B5</text>
+                    <rect x="760" y="545" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="770" y="557" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B6</text>
+                    <rect x="760" y="580" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="770" y="592" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B7</text>
+                    <rect x="760" y="615" width="20" height="20" fill="#ffff00" opacity="0.8" stroke="#ffff99" stroke-width="1"/>
+                    <text x="770" y="627" text-anchor="middle" fill="#000000" font-size="8" font-weight="bold">B8</text>
+                </g>
+                
+                <!-- Speaker (Panel D, rows 28-29) -->
+                <path d="M 800 370 L 820 380 L 820 360 Z" fill="#00aa00" stroke="#00ff00" stroke-width="2"/>
+                <circle cx="810" cy="370" r="8" fill="none" stroke="#00ff00" stroke-width="1.5"/>
+                <text x="830" y="375" fill="#00ff00" font-size="9">SPK</text>
+                
+                <!-- Connection wires (dashed lines) -->
+                <g id="wires" stroke-dasharray="5,5" stroke-width="1.5" fill="none" opacity="0.7">
+                    <!-- Volume pot to RC filter -->
+                    <path d="M 75 235 Q 300 350 450 510" stroke="#ff9900"/>
+                    <!-- RC filter output to LM386 input -->
+                    <path d="M 520 510 Q 650 400 720 340" stroke="#ff9900"/>
+                    <!-- LM386 output to speaker -->
+                    <path d="M 800 370 L 810 370" stroke="#00aa00"/>
+                    <!-- ADC pot to LaunchPad -->
+                    <path d="M 755 235 L 412 380" stroke="#0099ff"/>
+                    <!-- Shift register to LaunchPad -->
+                    <path d="M 115 350 L 265 380" stroke="#9933ff"/>
+                </g>
+                
+                <!-- Legend box -->
+                <g id="legend" font-size="10" fill="#cccccc">
+                    <rect x="950" y="120" width="230" height="200" fill="#2a2a3e" stroke="#666666" stroke-width="1"/>
+                    <text x="1065" y="140" text-anchor="middle" fill="#ffffff" font-weight="bold">LEGEND</text>
+                    
+                    <rect x="960" y="150" width="15" height="15" fill="#0066cc"/>
+                    <text x="980" y="162" fill="#cccccc">MSP430 LaunchPad</text>
+                    
+                    <rect x="960" y="175" width="15" height="15" fill="#9d4edd"/>
+                    <text x="980" y="187" fill="#cccccc">Shift Register</text>
+                    
+                    <rect x="960" y="200" width="15" height="15" fill="#ff8c42"/>
+                    <text x="980" y="212" fill="#cccccc">Audio Amplifier</text>
+                    
+                    <rect x="960" y="225" width="15" height="15" fill="#20a39f"/>
+                    <text x="980" y="237" fill="#cccccc">OLED Display</text>
+                    
+                    <rect x="960" y="250" width="15" height="15" fill="#ff4444"/>
+                    <text x="980" y="262" fill="#cccccc">LiPo Charger</text>
+                    
+                    <rect x="960" y="275" width="15" height="15" fill="#ffff00"/>
+                    <text x="980" y="287" fill="#cccccc">Buttons</text>
+                    
+                    <rect x="960" y="300" width="15" height="15" fill="#8B6F47"/>
+                    <text x="980" y="312" fill="#cccccc">Potentiometers</text>
+                </g>
+                
+                <!-- Sheet info -->
+                <text x="600" y="920" text-anchor="middle" fill="#888888" font-size="10">Elenco 9440 Breadboard (4 panels, ~60 rows) | Landscape orientation</text>
+            </svg>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #0066cc;"></div>
+                <span>MSP430G2553 LaunchPad</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #9d4edd;"></div>
+                <span>Shift Register (SN74HC165N)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #ff8c42;"></div>
+                <span>Audio Amplifier (LM386N-1)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #20a39f;"></div>
+                <span>OLED Display (DFR0650)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #ff4444;"></div>
+                <span>LiPo Charger (Adafruit 4410)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #ffff00;"></div>
+                <span>Tactile Buttons (×8)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #8B6F47;"></div>
+                <span>Potentiometers (Volume & ADC)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #cc0000;"></div>
+                <span>Power Rail (VCC)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #000000;"></div>
+                <span>Ground Rail (GND)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #888888;"></div>
+                <span>Resistors & Capacitors</span>
+            </div>
+        </div>
+        
+        <div class="connection-table">
+            <h2>Inter-Component Wire Connections</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>From Component</th>
+                        <th>Pin/Signal</th>
+                        <th>To Component</th>
+                        <th>Pin/Signal</th>
+                        <th>Wire Color/Net</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Volume Pot (Bourns Log)</td>
+                        <td>Wiper (pin 2)</td>
+                        <td>RC Filter Input</td>
+                        <td>R1 (1KΩ)</td>
+                        <td>Brown/VOL_WIPER</td>
+                        <td>Audio volume control</td>
+                    </tr>
+                    <tr>
+                        <td>RC Filter</td>
+                        <td>C1 (0.1µF output)</td>
+                        <td>LM386N-1</td>
+                        <td>Pin 3 (+IN)</td>
+                        <td>Orange/VOL_WIPER</td>
+                        <td>Filtered volume signal</td>
+                    </tr>
+                    <tr>
+                        <td>LM386N-1</td>
+                        <td>Pin 5 (OUTPUT)</td>
+                        <td>Speaker</td>
+                        <td>+ Terminal</td>
+                        <td>Green/SPKR_OUT</td>
+                        <td>Audio output</td>
+                    </tr>
+                    <tr>
+                        <td>Speaker</td>
+                        <td>- Terminal</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>Ground return</td>
+                    </tr>
+                    <tr>
+                        <td>MSP430G2553</td>
+                        <td>P1.2 (PWM out)</td>
+                        <td>RC Filter</td>
+                        <td>Input (before R1)</td>
+                        <td>Purple/PWM_OUT</td>
+                        <td>PWM audio drive</td>
+                    </tr>
+                    <tr>
+                        <td>ADC Pot (Linear)</td>
+                        <td>Wiper (pin 2)</td>
+                        <td>MSP430G2553</td>
+                        <td>P1.3 (ADC)</td>
+                        <td>Blue/ADC_POT</td>
+                        <td>Analog input (game control)</td>
+                    </tr>
+                    <tr>
+                        <td>SN74HC165N</td>
+                        <td>SH/~LD (pin 1)</td>
+                        <td>MSP430G2553</td>
+                        <td>P2.4</td>
+                        <td>Pink/SH_LD</td>
+                        <td>Shift register load signal</td>
+                    </tr>
+                    <tr>
+                        <td>SN74HC165N</td>
+                        <td>CLK (pin 2)</td>
+                        <td>MSP430G2553</td>
+                        <td>P1.5 (SCK)</td>
+                        <td>Yellow/SCK</td>
+                        <td>Shift register clock</td>
+                    </tr>
+                    <tr>
+                        <td>SN74HC165N</td>
+                        <td>QH (pin 9)</td>
+                        <td>MSP430G2553</td>
+                        <td>P1.6 (MISO/SCL)</td>
+                        <td>Green/MISO</td>
+                        <td>Shift register serial data</td>
+                    </tr>
+                    <tr>
+                        <td>Button 1-4</td>
+                        <td>One side</td>
+                        <td>SN74HC165N</td>
+                        <td>Pins A-D (inputs)</td>
+                        <td>Yellow/BTN1-4</td>
+                        <td>Button 1-4 inputs</td>
+                    </tr>
+                    <tr>
+                        <td>Button 5-8</td>
+                        <td>One side</td>
+                        <td>MSP430G2553</td>
+                        <td>P1.0, P1.1, P1.4, P2.0-2</td>
+                        <td>Yellow/BTN5-8</td>
+                        <td>Button 5-8 inputs (direct)</td>
+                    </tr>
+                    <tr>
+                        <td>Buttons 1-8</td>
+                        <td>Other side</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>Button ground</td>
+                    </tr>
+                    <tr>
+                        <td>Button Pull-ups ×8</td>
+                        <td>10KΩ resistors</td>
+                        <td>Button nets + VCC</td>
+                        <td>BTN1-8 to VCC</td>
+                        <td>Red/VCC</td>
+                        <td>Pull-up resistors for buttons</td>
+                    </tr>
+                    <tr>
+                        <td>OLED Module (DFR0650)</td>
+                        <td>SCL (pin 3)</td>
+                        <td>MSP430G2553</td>
+                        <td>P1.6 (SCL)</td>
+                        <td>Cyan/SCL</td>
+                        <td>I2C clock (or SPI clock)</td>
+                    </tr>
+                    <tr>
+                        <td>OLED Module (DFR0650)</td>
+                        <td>MOSI (pin 4)</td>
+                        <td>MSP430G2553</td>
+                        <td>P1.7 (MOSI/SDA)</td>
+                        <td>Cyan/MOSI</td>
+                        <td>I2C data or SPI MOSI</td>
+                    </tr>
+                    <tr>
+                        <td>OLED Module (DFR0650)</td>
+                        <td>VCC (pin 1)</td>
+                        <td>Power Rails</td>
+                        <td>VCC</td>
+                        <td>Red/VCC</td>
+                        <td>OLED power supply</td>
+                    </tr>
+                    <tr>
+                        <td>OLED Module (DFR0650)</td>
+                        <td>GND (pin 2)</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>OLED ground</td>
+                    </tr>
+                    <tr>
+                        <td>LiPo Charger (Adafruit 4410)</td>
+                        <td>VCC_IN (USB, pin 1)</td>
+                        <td>External USB</td>
+                        <td>+5V</td>
+                        <td>Red/VCC</td>
+                        <td>USB power input</td>
+                    </tr>
+                    <tr>
+                        <td>LiPo Charger (Adafruit 4410)</td>
+                        <td>BAT+ (pin 3)</td>
+                        <td>Battery</td>
+                        <td>Positive terminal</td>
+                        <td>Red/VCC</td>
+                        <td>Battery charging/supply</td>
+                    </tr>
+                    <tr>
+                        <td>LiPo Charger (Adafruit 4410)</td>
+                        <td>GND (pin 2)</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>Charger ground</td>
+                    </tr>
+                    <tr>
+                        <td>SN74HC165N</td>
+                        <td>VCC (pin 16)</td>
+                        <td>Power Rails</td>
+                        <td>VCC</td>
+                        <td>Red/VCC</td>
+                        <td>Shift register power</td>
+                    </tr>
+                    <tr>
+                        <td>SN74HC165N</td>
+                        <td>GND (pin 8)</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>Shift register ground</td>
+                    </tr>
+                    <tr>
+                        <td>LM386N-1</td>
+                        <td>Pin 6 (VS)</td>
+                        <td>Power Rails</td>
+                        <td>VCC</td>
+                        <td>Red/VCC</td>
+                        <td>Amplifier supply voltage</td>
+                    </tr>
+                    <tr>
+                        <td>LM386N-1</td>
+                        <td>Pin 4 (GND)</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>Amplifier ground</td>
+                    </tr>
+                    <tr>
+                        <td>Bourns Pots ×2</td>
+                        <td>Pin 1 (GND)</td>
+                        <td>Power Rails</td>
+                        <td>GND</td>
+                        <td>Black/GND</td>
+                        <td>Potentiometer ground</td>
+                    </tr>
+                    <tr>
+                        <td>Bourns Pots ×2</td>
+                        <td>Pin 3 (VCC)</td>
+                        <td>Power Rails</td>
+                        <td>VCC</td>
+                        <td>Red/VCC</td>
+                        <td>Potentiometer supply</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
