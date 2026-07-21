@@ -1,0 +1,27 @@
+Item #,Manufacturer,MPN,Description,Package,Qty,UOM,Unit Price (USD),Ext Price (USD),Preferred Vendor,Vendor Part #,Phase Needed,Status,Notes
+001,Texas Instruments,MSP-EXP430G2ET,MSP430G2553 LaunchPad dev board,—,1,EA,10.00,10.00,Mouser,595-MSP-EXP430G2ET,1,In Hand,
+002,Adafruit,#2674,2.7" 128x64 SSD1325 grayscale OLED SPI 3.3V,—,1,EA,49.95,49.95,Adafruit,2674,2,Order,adafruit.com only
+003,Microchip,23LC1024-I/P,128KB SPI SRAM,DIP-8,1,EA,2.50,2.50,DigiKey,23LC1024-I/P-ND,2,Order,External framebuffer + game-state RAM
+004,Winbond / Adafruit,W25Q128JVSSIQ,16MB SPI NOR Flash on DIP breakout,DIP breakout,1,EA,2.95,2.95,Adafruit,5634,2,Order,adafruit.com only — pre-assembled SOIC-8 on DIP PCB. Plugs directly into breadboard.
+005,Texas Instruments,SN74HC165N,8-bit parallel-in serial-out shift register,DIP-16,1,EA,0.80,0.80,DigiKey,296-8251-5-ND,3,In Hand,
+006,Omron,B3F-1000,6mm momentary tactile button 160gf 4-pin,Through-hole,12,EA,0.20,2.40,DigiKey,B3F-1000-ND,3,Partial (10 of 12),Need 2 more
+007,Texas Instruments,LM386N-1/NOPB,Low-voltage audio power amplifier,DIP-8,1,EA,1.00,1.00,DigiKey,LM386N-1/NOPB-ND,4,In Hand,
+008,CUI Devices,CSS-04008,Speaker 8 ohm 0.5W 40mm,—,1,EA,2.00,2.00,DigiKey,102-SP-3605-ND,4,In Hand,
+009,Samtec,TSW-140-07-G-S,Long-pin breakaway header 40-pos 2.54mm,Through-hole,2,EA,3.50,7.00,DigiKey,SAM1029-40-ND,2,Order,LaunchPad stacking headers
+010,Adafruit,#4410,USB-C LiPo charger 3.3V/5V output,—,1,EA,7.50,7.50,Adafruit,4410,5,In Hand,adafruit.com only
+011,Adafruit,#2011,3.7V 2000mAh LiPo battery JST-PH,—,1,EA,12.50,12.50,Adafruit,2011,5,In Hand,adafruit.com only
+012,Yageo,CFR-25JB-52-10K,Resistor 10k ohm 1/4W 5% carbon film,Axial,12,EA,0.05,0.60,DigiKey,10KEBK-ND,3,Partial (10 of 12),Need 2 more
+013,Yageo,CFR-25JB-52-1K0,Resistor 1k ohm 1/4W 5% carbon film,Axial,2,EA,0.05,0.10,DigiKey,1.0KEBK-ND,4,In Hand,
+014,Yageo,CFR-25JB-52-10R,Resistor 10 ohm 1/4W 5% carbon film,Axial,2,EA,0.05,0.10,DigiKey,10EBK-ND,4,Order,Speaker series resistor
+015,Kemet,C320C104M5R5TA,Capacitor 0.1uF 50V ceramic,Axial,4,EA,0.10,0.40,DigiKey,399-4151-ND,2,Partial (2 of 4),Need 2 more
+016,Nichicon,UVR1C100MDD,Capacitor 10uF 16V electrolytic,Radial 2.5mm,3,EA,0.25,0.75,DigiKey,493-1081-ND,4,Order,Audio input coupling + VCC bypass
+017,Nichicon,UVR1C221MHD,Capacitor 220uF 16V electrolytic,Radial 5mm,1,EA,0.50,0.50,DigiKey,493-1377-ND,4,Order,LM386 output coupling
+018,—,—,Full-size solderless breadboard 830 tie-points,—,1,EA,10.00,10.00,Amazon,—,2,In Hand,Elenco 9440
+019,—,—,Jumper wire kit M-M 20cm assorted colours,—,1,PK,4.00,4.00,Amazon,—,2,In Hand,
+020,Bourns,PTV09A-4020F-A103,Potentiometer 10k ohm audio/log taper 9mm 20mm shaft,Through-hole,1,EA,1.50,1.50,DigiKey,PTV09A-4020F-A103-ND,4,In Hand,Volume control. A taper = audio/log. Have B taper (linear) as spare.
+,,,,,,,,,,,,,,
+,,ADAFRUIT SUBTOTAL (002 004 010 011 — order from adafruit.com),,,,,,72.90,Adafruit,,,
+,,DIGIKEY SUBTOTAL (003 005–009 012–017 020),,,,,,19.65,DigiKey,,,
+,,MOUSER SUBTOTAL (001),,,,,,10.00,Mouser,,,
+,,AMAZON / GENERIC (018 019),,,,,,14.00,Amazon,,,
+,,TOTAL BOM (excl. shipping),,,,,,116.55,,,,
