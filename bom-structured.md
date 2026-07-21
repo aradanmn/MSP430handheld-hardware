@@ -1,5 +1,5 @@
 # MSP430 Handheld Gaming Console — Structured BOM (Multi-Level)
-_Revision: E — 2026-03-21_
+_Revision: F — 2026-07-21_
 
 A structured (multi-level) BOM expresses the product as a parent-child hierarchy. Each sub-assembly is broken down into its constituent components. **Qty** is per-parent (not aggregate) — to get total procurement quantities see `bom-flat.md`.
 
@@ -7,7 +7,7 @@ Level key: **L0** = top-level assembly · **L1** = sub-assembly · **L2** = purc
 
 ---
 
-## L0 — MSP430 Handheld Gaming Console (Rev C, Prototype)
+## L0 — MSP430 Handheld Gaming Console (Rev F, Prototype)
 
 | Lvl | Item # | Assembly / Part | Manufacturer | MPN | Qty | UOM | Unit Price | Notes |
 |-----|--------|----------------|-------------|-----|-----|-----|------------|-------|
@@ -15,7 +15,7 @@ Level key: **L0** = top-level assembly · **L1** = sub-assembly · **L2** = purc
 | L1 | 1.0 | → MCU & Programming Module | — | — | 1 | EA | — | |
 | L2 | 1.1 | → → LaunchPad MSP430G2553 dev board | Texas Instruments | MSP-EXP430G2ET | 1 | EA | $10.00 | Includes eZ-FET debugger, LED1/LED2, button S2 |
 | L1 | 2.0 | → Display Module | — | — | 1 | EA | — | |
-| L2 | 2.1 | → → 2.7" SSD1325 grayscale OLED SPI | Adafruit | #2674 | 1 | EA | $49.95 | 128×64, 16 gray levels, 3.3V SPI. Adafruit only. |
+| L2 | 2.1 | → → 2.7" SSD1325 OLED (monochrome) SPI | Adafruit | #2674 | 1 | EA | $49.95 | 128×64, 3.3V SPI. Module has on-board level shifter. Adafruit only. |
 | L1 | 3.0 | → Memory Module | — | — | 1 | EA | — | Shared SPI bus (USCI_B0) |
 | L2 | 3.1 | → → 128KB SPI SRAM (DIP-8) | Microchip | 23LC1024-I/P | 1 | EA | $2.50 | Framebuffer store + game state RAM |
 | L2 | 3.2 | → → 16MB SPI NOR Flash, DIP breakout | Winbond / Adafruit | W25Q128JVSSIQ | 1 | EA | $2.95 | Sprites, music sequences, save data. Pre-assembled on Adafruit #5634 DIP PCB — plugs directly into breadboard. Standard SPI mode; USCI_B0 compatible. Adafruit only. |
@@ -27,7 +27,7 @@ Level key: **L0** = top-level assembly · **L1** = sub-assembly · **L2** = purc
 | L2 | 4.3 | → → Resistor, 10kΩ 1/4W (button pull-ups) | Yageo | CFR-25JB-52-10K | 8 | EA | $0.05 | One per button; 3.3V → resistor → SR input → button → GND |
 | L2 | 4.4 | → → Capacitor, 0.1µF 50V ceramic (shift reg bypass) | Kemet | C320C104M5R5TA | 1 | EA | $0.10 | Place on SN74HC165N VCC pin |
 | L1 | 5.0 | → Audio Module | — | — | 1 | EA | — | PWM tone via Timer_A → LM386 → speaker |
-| L2 | 5.1 | → → Audio power amplifier (DIP-8) | Texas Instruments | LM386N-1/NOPB | 1 | EA | $1.00 | 20× gain default. Pins 1+8 open. |
+| L2 | 5.1 | → → Audio power amplifier (DIP-8) | Texas Instruments | LM386N-1/NOPB | 1 | EA | $1.00 | 20× gain default. Pins 1+8 open. **V+ (pin 6) → 5V rail (item 6.3), NOT 3.3V — LM386N-1 minimum supply is 4V.** |
 | L2 | 5.2 | → → Speaker, 8Ω, 0.5W, 40mm | CUI Devices | CSS-04008 | 1 | EA | $2.00 | LM386 pin 5 → 220µF cap → 10Ω → speaker+ |
 | L2 | 5.3 | → → Resistor, 1kΩ 1/4W (RC filter) | Yageo | CFR-25JB-52-1K0 | 1 | EA | $0.05 | PWM output → 1kΩ → 10µF cap → pot wiper → LM386 pin 3 |
 | L2 | 5.4 | → → Resistor, 10Ω 1/4W (speaker series) | Yageo | CFR-25JB-52-10R | 1 | EA | $0.05 | Series protection on speaker output |
@@ -35,9 +35,12 @@ Level key: **L0** = top-level assembly · **L1** = sub-assembly · **L2** = purc
 | L2 | 5.6 | → → Capacitor, 10µF 16V electrolytic (VCC bypass) | Nichicon | UVR1C100MDD | 1 | EA | $0.25 | LM386 pin 7 → GND |
 | L2 | 5.7 | → → Capacitor, 220µF 16V electrolytic (output coupling) | Nichicon | UVR1C221MHD | 1 | EA | $0.50 | LM386 pin 5 → speaker |
 | L2 | 5.8 | → → Potentiometer, 10kΩ audio/log taper, 9mm | Bourns | PTV09A-4020F-A103 | 1 | EA | $1.50 | Volume control; RC filter output → wiper → LM386 pin 3. A taper = audio/log. |
-| L1 | 6.0 | → Power Module | — | — | 1 | EA | — | USB-C LiPo charge + 3.3V/5V rail |
-| L2 | 6.1 | → → USB-C LiPo charger, 3.3V/5V output | Adafruit | #4410 | 1 | EA | $7.50 | Charges LiPo; provides regulated 3.3V to system. Adafruit only. |
+| L1 | 6.0 | → Power Module | — | — | 1 | EA | — | USB-C charge → LiPo → regulated 3.3V (logic) + 5V (audio) rails |
+| L2 | 6.1 | → → USB-C Micro-Lipo charger (charge only) | Adafruit | #4410 | 1 | EA | $7.50 | Charges the LiPo. Output is **raw cell voltage (~3.0–4.2V), NOT regulated** — regulation is done by 6.3/6.4. Adafruit only. |
 | L2 | 6.2 | → → LiPo battery, 3.7V 2000mAh, JST-PH | Adafruit | #2011 | 1 | EA | $12.50 | Adafruit only. |
+| L2 | 6.3 | → → PowerBoost 500 Basic — 5V boost | Adafruit | #1903 | 1 | EA | $14.95 | LiPo → regulated 5V for the LM386 (min supply 4V). EN pin → power switch 6.5. Adafruit only. |
+| L2 | 6.4 | → → 3.3V buck-boost regulator (~500mA) | Pololu | S7V8F3 | 1 | EA | $5.95 | LiPo → regulated 3.3V logic rail. Protects MSP430 (VCC abs-max 3.6V) from the 4.2V full-charge cell. Also on DigiKey (1738-1517-ND). |
+| L2 | 6.5 | → → SPDT slide switch (master power) | E-Switch | EG1218 | 1 | EA | $0.60 | Master on/off in the LiPo feed to 6.3/6.4. |
 | L1 | 7.0 | → Prototyping Platform | — | — | 1 | EA | — | Temporary — replaced by custom PCB in final build |
 | L2 | 7.1 | → → Long-pin breakaway header, 40-pos, 2.54mm | Samtec | TSW-140-07-G-S | 2 | EA | $3.50 | LaunchPad stacking headers |
 | L2 | 7.2 | → → Solderless breadboard, 830 tie-points | — | — | 1 | EA | $10.00 | Elenco 9440 or equivalent |
@@ -67,11 +70,11 @@ All SPI devices share USCI_B0 on the MSP430G2553. CS pins are the only different
 |--------|------|------|------|----|----|-----|
 | SSD1325 OLED (2.1) | P1.5 | P1.7 | — | P2.0 | P2.1 | P2.2 |
 | 23LC1024 SRAM (3.1) | P1.5 | P1.7 | P1.6 | P2.3 | — | — |
-| W25Q32 Flash (3.2) | P1.5 | P1.7 | P1.6 | P2.4 | — | — |
+| W25Q128 Flash (3.2) | P1.5 | P1.7 | P1.6 | P2.4 | — | — |
 | SN74HC165N input (4.1) | P1.5 | — | P1.6 | P2.5 (PL) | — | — |
 
 > **Note:** P1.6 is also LED2 on the LaunchPad. Remove the LED2 jumper when using SPI.
-> WP and HOLD pins on the 23LC1024 and W25Q32 should be tied to 3.3V.
+> WP and HOLD pins on the 23LC1024 and W25Q128 should be tied to 3.3V.
 
 ---
 
