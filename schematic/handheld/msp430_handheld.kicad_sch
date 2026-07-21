@@ -1,0 +1,610 @@
+(kicad_sch
+	(version 20250114)
+	(generator "python-script")
+	(generator_version "1.0")
+	(uuid "511e2a34-67b1-4778-85ba-8e5b39f2c794")
+	(paper "B")
+	(title_block
+		(title "MSP430G2553 Handheld — Block Diagram")
+		(date "2026-07-21")
+		(rev "20260721-161058")
+		(company "MSP430 Handheld — open hardware")
+		(comment 1 "Root / Interfaces")
+	)
+	(lib_symbols
+(symbol "power:+3V3"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:VBAT"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VBAT"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VBAT_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VBAT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(sheet (at 241.3000 139.7000) (size 86.3600 50.8000)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "3f63c8c3-a288-4672-8991-0731a70784df")
+		(property "Sheetname" "MCU" (at 241.3000 139.2000 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheet_mcu.kicad_sch" (at 241.3000 191.5000 0) (effects (font (size 1.016 1.016)) (justify left top)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794" (page "2")))))
+	(sheet (at 381.0000 101.6000) (size 76.2000 35.5600)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "c794d37d-ff6b-4419-ad1f-1f8800f099ab")
+		(property "Sheetname" "Display" (at 381.0000 101.1000 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheet_display.kicad_sch" (at 381.0000 138.1600 0) (effects (font (size 1.016 1.016)) (justify left top)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794" (page "3")))))
+	(sheet (at 381.0000 157.4800) (size 76.2000 35.5600)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "e64b37b4-817b-4e4a-90be-292235559bc3")
+		(property "Sheetname" "Memory" (at 381.0000 156.9800 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheet_memory.kicad_sch" (at 381.0000 194.0400 0) (effects (font (size 1.016 1.016)) (justify left top)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794" (page "4")))))
+	(sheet (at 101.6000 139.7000) (size 76.2000 35.5600)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f")
+		(property "Sheetname" "Input" (at 101.6000 139.2000 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheet_input.kicad_sch" (at 101.6000 176.2600 0) (effects (font (size 1.016 1.016)) (justify left top)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794" (page "5")))))
+	(sheet (at 381.0000 213.3600) (size 76.2000 35.5600)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "ad891c38-97df-4715-a95b-c14ed7a69c70")
+		(property "Sheetname" "Audio" (at 381.0000 212.8600 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheet_audio.kicad_sch" (at 381.0000 249.9200 0) (effects (font (size 1.016 1.016)) (justify left top)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794" (page "6")))))
+	(sheet (at 241.3000 228.6000) (size 86.3600 35.5600)
+		(fields_autoplaced yes)
+		(stroke (width 0.1524) (type solid))
+		(fill (color 0 0 0 0.0000))
+		(uuid "0e5f7733-457b-4ec0-b0ba-8716e1215a84")
+		(property "Sheetname" "Power" (at 241.3000 228.1000 0) (effects (font (size 1.27 1.27)) (justify left bottom)))
+		(property "Sheetfile" "sheet_power.kicad_sch" (at 241.3000 265.1600 0) (effects (font (size 1.016 1.016)) (justify left top)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794" (page "7")))))
+	(text "Block Diagram" (at 381.0000 20.3200 0)
+		(effects (font (size 5.000 5.000) (bold yes)) (justify left))
+		(uuid "ac894999-e632-4de4-9307-2611d30c9634"))
+	(text "MSP430G2553 Handheld — Interfaces" (at 381.0000 33.0200 0)
+		(effects (font (size 2.000 2.000)) (justify left))
+		(uuid "20456c36-1a13-4c6c-bf6c-ef2292c6288b"))
+	(text "SPI USCI_B0  SCK P1.5 / MOSI P1.7 / MISO P1.6" (at 332.7400 119.3800 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "2501da02-00f9-4b27-86e3-5ce36612cfab"))
+	(text "OLED_CS P2.0 / DC P2.1 / RST P2.2" (at 332.7400 129.5400 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "b85787f2-61bf-43c7-b08d-16ed15798e45"))
+	(text "SRAM_CS P2.3 / FLASH_CS P2.4" (at 332.7400 175.2600 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "6b807870-9710-4581-a066-b1c13ca55b20"))
+	(text "SH/LD P2.5  (74HC165 latch)" (at 182.8800 147.3200 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "560e3203-cce6-4693-af24-60df6f92b2b2"))
+	(text "SCK/MISO shared SPI" (at 182.8800 157.4800 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "0ac29f53-0361-4c76-b773-e3df7f85f878"))
+	(text "PWM_OUT P1.2  ->  RC + LM386" (at 332.7400 231.1400 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "6c411878-2727-4dfa-bfbb-8356e611ddaf"))
+	(text "+3V3 logic / +5V audio / GND" (at 332.7400 246.3800 0)
+		(effects (font (size 1.600 1.600) (bold yes)) (justify left))
+		(uuid "45b229a6-8044-4656-8442-ec4e11cf1bcd"))
+	(text "Legend" (at 20.3200 96.5200 0)
+		(effects (font (size 2.000 2.000) (bold yes)) (justify left))
+		(uuid "db23e79d-70bd-4929-8bdd-ac6480142892"))
+	(rectangle (start 20.3200 98.6000) (end 24.1300 101.6000)
+		(stroke (width 0.254) (type default)) (fill (type none)) (uuid "bb86606c-b306-47ff-9382-dad2c6116c31"))
+	(text "Functional block (hierarchical sheet)" (at 26.6700 101.6000 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "a1754520-23e0-4123-9eb4-51e5b8357b27"))
+	(rectangle (start 20.3200 108.7600) (end 24.1300 111.7600)
+		(stroke (width 0.254) (type default)) (fill (type none)) (uuid "4da255cd-4c58-48cf-8c3e-30ca16757d4f"))
+	(text "SPI bus shared on USCI_B0 (P1.5/6/7)" (at 26.6700 111.7600 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "f3c53854-1775-48ad-aaa7-7a474cfb9d04"))
+	(rectangle (start 20.3200 118.9200) (end 24.1300 121.9200)
+		(stroke (width 0.254) (type default)) (fill (type none)) (uuid "a9631396-4ad7-496f-9932-3a01d01080dd"))
+	(text "CS/control = dedicated GPIO" (at 26.6700 121.9200 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "dc879ece-5c9b-476d-9823-332f9ed10abb"))
+	(rectangle (start 20.3200 129.0800) (end 24.1300 132.0800)
+		(stroke (width 0.254) (type default)) (fill (type none)) (uuid "3cb0fdec-60cb-49fd-9079-6f07ed084ce7"))
+	(text "Power: +3V3 logic, +5V audio" (at 26.6700 132.0800 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "5ae0720b-d40b-423a-830a-aa15e8183340"))
+	(text "Power rails" (at 20.3200 193.0400 0)
+		(effects (font (size 2.000 2.000) (bold yes)) (justify left))
+		(uuid "a80eed84-2694-4cf8-b885-389ce94028ec"))
+	(text "- USB-C 5V (charge)" (at 20.3200 203.2000 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "eecec24c-bf27-49b2-97d3-5faab23b5695"))
+	(text "- VBAT 3.0-4.2V (LiPo)" (at 20.3200 213.3600 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "63feae06-4eee-4453-a073-1cbb0d32cba5"))
+	(text "- +5V boost (LM386)" (at 20.3200 223.5200 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "4934abcb-b50d-4a8d-b014-5c9b6a1d2e26"))
+	(text "- +3V3 buck-boost (logic)" (at 20.3200 233.6800 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "8d0fb123-5489-4235-a1d4-d5ad97e53e31"))
+	(text "- GND" (at 20.3200 243.8400 0)
+		(effects (font (size 1.400 1.400)) (justify left))
+		(uuid "cd6ff3ed-31f6-4039-beac-2683cafa9b24"))
+	(sheet_instances (path "/" (page "1")))
+	(embedded_fonts no)
+)

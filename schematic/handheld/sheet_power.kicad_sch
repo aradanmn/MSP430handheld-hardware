@@ -1,0 +1,901 @@
+(kicad_sch
+	(version 20250114)
+	(generator "python-script")
+	(generator_version "1.0")
+	(uuid "511e2a34-67b1-4778-85ba-8e5b39f2c794")
+	(paper "B")
+	(title_block
+		(title "MSP430 Handheld — Power")
+		(date "2026-07-21")
+		(rev "20260721-161058")
+		(company "MSP430 Handheld — open hardware")
+		(comment 1 "Main Function: LiPo charge + 5V/3V3 rails")
+	)
+	(lib_symbols
+		(symbol "Module:Charger_4410"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "U" (at 0 7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "Charger_4410" (at 0 -7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "Charger_4410_0_1"
+				(rectangle (start -10.1600 5.0800) (end 10.1600 -5.0800)
+					(stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "Charger_4410_1_1"
+				(pin passive line (at -15.2400 2.5400 0) (length 5.08)
+					(name "USB_C" (effects (font (size 1.016 1.016))))
+					(number "1" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 15.2400 2.5400 180) (length 5.08)
+					(name "BAT+" (effects (font (size 1.016 1.016))))
+					(number "2" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 15.2400 0.0000 180) (length 5.08)
+					(name "BAT-" (effects (font (size 1.016 1.016))))
+					(number "3" (effects (font (size 1.016 1.016)))))
+			)
+		)
+		(symbol "Module:PowerBoost_1903"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "U" (at 0 7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "PowerBoost500_1903" (at 0 -7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "PowerBoost_1903_0_1"
+				(rectangle (start -10.1600 5.0800) (end 10.1600 -5.0800)
+					(stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "PowerBoost_1903_1_1"
+				(pin passive line (at -15.2400 2.5400 0) (length 5.08)
+					(name "BAT" (effects (font (size 1.016 1.016))))
+					(number "1" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -15.2400 0.0000 0) (length 5.08)
+					(name "GND" (effects (font (size 1.016 1.016))))
+					(number "2" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -15.2400 -2.5400 0) (length 5.08)
+					(name "EN" (effects (font (size 1.016 1.016))))
+					(number "3" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 15.2400 2.5400 180) (length 5.08)
+					(name "5V" (effects (font (size 1.016 1.016))))
+					(number "4" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 15.2400 0.0000 180) (length 5.08)
+					(name "GND2" (effects (font (size 1.016 1.016))))
+					(number "5" (effects (font (size 1.016 1.016)))))
+			)
+		)
+		(symbol "Module:S7V8F3"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "U" (at 0 7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "S7V8F3_3V3" (at 0 -7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "S7V8F3_0_1"
+				(rectangle (start -10.1600 5.0800) (end 10.1600 -5.0800)
+					(stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "S7V8F3_1_1"
+				(pin passive line (at -15.2400 2.5400 0) (length 5.08)
+					(name "VIN" (effects (font (size 1.016 1.016))))
+					(number "1" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -15.2400 0.0000 0) (length 5.08)
+					(name "GND" (effects (font (size 1.016 1.016))))
+					(number "2" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -15.2400 -2.5400 0) (length 5.08)
+					(name "EN" (effects (font (size 1.016 1.016))))
+					(number "3" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 15.2400 2.5400 180) (length 5.08)
+					(name "VOUT" (effects (font (size 1.016 1.016))))
+					(number "4" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 15.2400 0.0000 180) (length 5.08)
+					(name "GND2" (effects (font (size 1.016 1.016))))
+					(number "5" (effects (font (size 1.016 1.016)))))
+			)
+		)
+		(symbol "Module:SW_SPDT"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "SW" (at 0 7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "EG1218" (at 0 -7.6200 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "SW_SPDT_0_1"
+				(rectangle (start -7.6200 5.0800) (end 7.6200 -5.0800)
+					(stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "SW_SPDT_1_1"
+				(pin passive line (at -12.7000 2.5400 0) (length 5.08)
+					(name "COM" (effects (font (size 1.016 1.016))))
+					(number "1" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7000 2.5400 180) (length 5.08)
+					(name "NO" (effects (font (size 1.016 1.016))))
+					(number "2" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 12.7000 0.0000 180) (length 5.08)
+					(name "NC" (effects (font (size 1.016 1.016))))
+					(number "3" (effects (font (size 1.016 1.016)))))
+			)
+		)
+(symbol "Connector:Conn_01x02_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:+3V3"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:VBAT"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VBAT"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VBAT_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VBAT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Module:Charger_4410") (at 63.5000 63.5000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "f8874e65-eab2-4292-ae0f-5c0d787670ce")
+		(property "Reference" "U6" (at 66.0400 60.9600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "Adafruit #4410 charger" (at 66.0400 66.0400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 63.5000 63.5000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 63.5000 63.5000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0e5f7733-457b-4ec0-b0ba-8716e1215a84" (reference "U6") (unit 1))))
+	)
+	(wire (pts (xy 48.2600 60.9600) (xy 50.8000 60.9600)) (stroke (width 0) (type default)) (uuid "bc9938db-ecf1-4fae-940d-279dd6d18d38"))
+	(global_label "USB_C_IN" (shape input) (at 50.8000 60.9600 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "ecbc2c24-6d4a-4dbb-ad27-bb9fbde94937"))
+	(wire (pts (xy 78.7400 60.9600) (xy 76.2000 60.9600)) (stroke (width 0) (type default)) (uuid "a3b54670-8a35-45da-bde4-bd37df18c14a"))
+	(global_label "VBAT" (shape output) (at 76.2000 60.9600 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "20ac2b96-d7a6-4325-aa92-de372f93b83c"))
+	(symbol
+		(lib_id "power:GND") (at 78.7400 63.5000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "f884b7ca-b439-4779-ba79-e5c7a075ccb7")
+		(property "Reference" "#PWR46" (at 78.7400 59.6900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 78.7400 65.0000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin") (at 63.5000 114.3000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "32b6df67-c5b9-4374-ae16-ee858e6d5fab")
+		(property "Reference" "BT1" (at 66.0400 111.7600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "LiPo 3.7V 2000mAh #2011" (at 66.0400 116.8400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 63.5000 114.3000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 63.5000 114.3000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0e5f7733-457b-4ec0-b0ba-8716e1215a84" (reference "BT1") (unit 1))))
+	)
+	(wire (pts (xy 68.5800 114.3000) (xy 66.0400 114.3000)) (stroke (width 0) (type default)) (uuid "859fe0fc-6a98-4978-9bce-7f52445a8b14"))
+	(global_label "VBAT" (shape passive) (at 66.0400 114.3000 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "65e37a7b-4b75-4fe3-ac13-5b1892c31d69"))
+	(symbol
+		(lib_id "power:GND") (at 68.5800 116.8400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "aba0b9c7-ab95-4914-89e1-20216867ed70")
+		(property "Reference" "#PWR47" (at 68.5800 113.0300 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 68.5800 118.3400 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "Module:SW_SPDT") (at 127.0000 88.9000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "62435049-1ef6-48f1-a08d-13c3d82f0d27")
+		(property "Reference" "SW9" (at 129.5400 86.3600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "EG1218 power switch" (at 129.5400 91.4400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 127.0000 88.9000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 127.0000 88.9000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0e5f7733-457b-4ec0-b0ba-8716e1215a84" (reference "SW9") (unit 1))))
+	)
+	(wire (pts (xy 114.3000 86.3600) (xy 116.8400 86.3600)) (stroke (width 0) (type default)) (uuid "cb5bbe4f-48d0-447b-911a-21b302ac252e"))
+	(global_label "VBAT" (shape passive) (at 116.8400 86.3600 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "8834c30d-7a1b-4d68-8fa2-499be5b4cbbf"))
+	(wire (pts (xy 139.7000 86.3600) (xy 137.1600 86.3600)) (stroke (width 0) (type default)) (uuid "5c857ee2-a048-4da0-a352-64595bea909e"))
+	(global_label "SYS_SW" (shape output) (at 137.1600 86.3600 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "1fdda434-3c7c-4673-bd2a-8e880a945b59"))
+	(no_connect (at 139.7000 88.9000) (uuid "88a0e327-e1bc-4f2c-bd4a-19f81afaa185"))
+	(symbol
+		(lib_id "Module:PowerBoost_1903") (at 203.2000 63.5000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "3cbff3ce-385d-4739-93f7-e44ce4d417e3")
+		(property "Reference" "U7" (at 205.7400 60.9600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "Adafruit #1903 PowerBoost 500" (at 205.7400 66.0400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 203.2000 63.5000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 203.2000 63.5000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0e5f7733-457b-4ec0-b0ba-8716e1215a84" (reference "U7") (unit 1))))
+	)
+	(wire (pts (xy 187.9600 60.9600) (xy 190.5000 60.9600)) (stroke (width 0) (type default)) (uuid "1d6c3cbb-1d84-49bd-8ef2-a11ef2aef3f2"))
+	(global_label "SYS_SW" (shape input) (at 190.5000 60.9600 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "b0874a8b-81f5-4863-a34c-5b3ecbda5402"))
+	(symbol
+		(lib_id "power:GND") (at 187.9600 63.5000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "0efaf186-3014-47b4-b8c2-069c3ba07288")
+		(property "Reference" "#PWR48" (at 187.9600 59.6900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 187.9600 65.0000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 187.9600 66.0400) (xy 190.5000 66.0400)) (stroke (width 0) (type default)) (uuid "984c1892-92bb-49de-8341-bfd6569ef6be"))
+	(global_label "SYS_SW" (shape input) (at 190.5000 66.0400 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "a6ceba1b-81e8-4331-9843-90d0feaadb50"))
+	(symbol
+		(lib_id "power:+5V") (at 218.4400 60.9600 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "6f483783-0491-47d4-8608-a33650d7b290")
+		(property "Reference" "#PWR49" (at 218.4400 57.1500 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+5V" (at 218.4400 62.4600 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:GND") (at 218.4400 63.5000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "f0b55afd-9fc3-48f5-8eff-c8f32bd31bb0")
+		(property "Reference" "#PWR50" (at 218.4400 59.6900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 218.4400 65.0000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "Module:S7V8F3") (at 203.2000 127.0000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "5643b4e9-add5-4c2b-81a3-cbb4d5ddfcbc")
+		(property "Reference" "U8" (at 205.7400 124.4600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "Pololu S7V8F3 3V3" (at 205.7400 129.5400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 203.2000 127.0000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 203.2000 127.0000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0e5f7733-457b-4ec0-b0ba-8716e1215a84" (reference "U8") (unit 1))))
+	)
+	(wire (pts (xy 187.9600 124.4600) (xy 190.5000 124.4600)) (stroke (width 0) (type default)) (uuid "7db8b7ee-e2ce-4e64-94ed-c243a474544c"))
+	(global_label "SYS_SW" (shape input) (at 190.5000 124.4600 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "c761443d-ce3f-4324-837c-e47fc7b9d445"))
+	(symbol
+		(lib_id "power:GND") (at 187.9600 127.0000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "a2609cfe-abda-4fd7-a37b-5b5aa04751d7")
+		(property "Reference" "#PWR51" (at 187.9600 123.1900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 187.9600 128.5000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 187.9600 129.5400) (xy 190.5000 129.5400)) (stroke (width 0) (type default)) (uuid "80656d7a-7636-4339-b219-6f54f62004a9"))
+	(global_label "SYS_SW" (shape input) (at 190.5000 129.5400 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "dd78a8ec-f186-4134-b406-c9f888300825"))
+	(symbol
+		(lib_id "power:+3V3") (at 218.4400 124.4600 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "0af392cd-6a7c-48d7-87c6-ee4ea14ccda8")
+		(property "Reference" "#PWR52" (at 218.4400 120.6500 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 218.4400 125.9600 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:GND") (at 218.4400 127.0000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "004ed05b-eebc-47db-b365-c160f38742f6")
+		(property "Reference" "#PWR53" (at 218.4400 123.1900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 218.4400 128.5000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(sheet_instances (path "/" (page "1")))
+	(embedded_fonts no)
+)

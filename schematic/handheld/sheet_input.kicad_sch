@@ -1,0 +1,1466 @@
+(kicad_sch
+	(version 20250114)
+	(generator "python-script")
+	(generator_version "1.0")
+	(uuid "511e2a34-67b1-4778-85ba-8e5b39f2c794")
+	(paper "B")
+	(title_block
+		(title "MSP430 Handheld — Input")
+		(date "2026-07-21")
+		(rev "20260721-161058")
+		(company "MSP430 Handheld — open hardware")
+		(comment 1 "Main Function: 74HC165 8-button PISO input")
+	)
+	(lib_symbols
+(symbol "74xx:74HC165"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -7.62 19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "74HC165"
+				(at -7.62 -21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT165.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Shift Register, 8-bit, Parallel Load"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "8 bit shift register parallel load cmos"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "DIP?16* SO*16*3.9x9.9mm*P1.27mm* SSOP*16*5.3x6.2mm*P0.65mm* TSSOP*16*4.4x5mm*P0.65*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "74HC165_1_0"
+				(pin input line
+					(at -12.7 15.24 0)
+					(length 5.08)
+					(name "DS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 12.7 0)
+					(length 5.08)
+					(name "D0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 10.16 0)
+					(length 5.08)
+					(name "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 7.62 0)
+					(length 5.08)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 5.08 0)
+					(length 5.08)
+					(name "D3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 2.54 0)
+					(length 5.08)
+					(name "D4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 0 0)
+					(length 5.08)
+					(name "D5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -2.54 0)
+					(length 5.08)
+					(name "D6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -5.08 0)
+					(length 5.08)
+					(name "D7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -10.16 0)
+					(length 5.08)
+					(name "~{PL}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -15.24 0)
+					(length 5.08)
+					(name "CP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -17.78 0)
+					(length 5.08)
+					(name "~{CE}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 22.86 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -25.4 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 15.24 180)
+					(length 5.08)
+					(name "Q7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 12.7 180)
+					(length 5.08)
+					(name "~{Q7}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "74HC165_1_1"
+				(rectangle
+					(start -7.62 17.78)
+					(end 7.62 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:+3V3"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "74xx:74HC165") (at 177.8000 101.6000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "0c5a3157-526f-44cb-8fa7-a80ce7cd4316")
+		(property "Reference" "U2" (at 180.3400 99.0600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "SN74HC165N" (at 180.3400 104.1400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 177.8000 101.6000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 177.8000 101.6000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "U2") (unit 1))))
+	)
+	(wire (pts (xy 165.1000 111.7600) (xy 167.6400 111.7600)) (stroke (width 0) (type default)) (uuid "29f6f9c5-6608-49a6-8ec9-7bc962db83f0"))
+	(global_label "SH_LD" (shape input) (at 167.6400 111.7600 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "d82b4cb0-dc69-465b-904d-054790503023"))
+	(wire (pts (xy 165.1000 116.8400) (xy 167.6400 116.8400)) (stroke (width 0) (type default)) (uuid "9777dc3f-a36e-4ca8-867d-fd2444f35d06"))
+	(global_label "SCK" (shape input) (at 167.6400 116.8400 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "93be6751-3ad8-47c3-b6cf-3776e6ff98b3"))
+	(wire (pts (xy 190.5000 86.3600) (xy 187.9600 86.3600)) (stroke (width 0) (type default)) (uuid "3587b696-9800-4984-9fc3-61b437cf1142"))
+	(global_label "MISO" (shape output) (at 187.9600 86.3600 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "f3bca35e-f60a-4954-9d1b-4e81858225c4"))
+	(no_connect (at 190.5000 88.9000) (uuid "2f9a530f-4e61-4970-a12a-4985231d2b95"))
+	(symbol
+		(lib_id "power:GND") (at 165.1000 86.3600 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "04b41508-3c03-43f8-8d44-90f5a802ed05")
+		(property "Reference" "#PWR18" (at 165.1000 82.5500 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 165.1000 87.8600 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:GND") (at 165.1000 119.3800 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "df119041-3084-4389-aba8-9b64dcf6d123")
+		(property "Reference" "#PWR19" (at 165.1000 115.5700 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 165.1000 120.8800 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:+3V3") (at 177.8000 78.7400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "a312b438-cb17-4341-be6e-bb40309d653b")
+		(property "Reference" "#PWR20" (at 177.8000 74.9300 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 177.8000 80.2400 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:GND") (at 177.8000 127.0000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "340fb831-e169-4637-8d2f-f09ff8575efe")
+		(property "Reference" "#PWR21" (at 177.8000 123.1900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 177.8000 128.5000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 165.1000 88.9000) (xy 167.6400 88.9000)) (stroke (width 0) (type default)) (uuid "e5504e24-ffee-4756-ad71-694f944d6b6b"))
+	(global_label "BTN_A" (shape input) (at 167.6400 88.9000 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "febf67a6-6f24-482a-b29b-0655aadcd313"))
+	(wire (pts (xy 165.1000 91.4400) (xy 167.6400 91.4400)) (stroke (width 0) (type default)) (uuid "979ed6da-eaf6-494e-b2ab-e4f1bb977902"))
+	(global_label "BTN_B" (shape input) (at 167.6400 91.4400 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "09cf0bf8-3154-4323-b0bc-8466d3ab6873"))
+	(wire (pts (xy 165.1000 93.9800) (xy 167.6400 93.9800)) (stroke (width 0) (type default)) (uuid "0b5eb892-c149-42b4-8919-6c3b39be3b16"))
+	(global_label "BTN_C" (shape input) (at 167.6400 93.9800 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "6829db4e-cc2c-4426-a805-9c4dac313a4d"))
+	(wire (pts (xy 165.1000 96.5200) (xy 167.6400 96.5200)) (stroke (width 0) (type default)) (uuid "3ff156af-ee37-45ec-9d3b-cf6ca0ea3642"))
+	(global_label "BTN_D" (shape input) (at 167.6400 96.5200 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "09305d02-f8b9-4d61-86e7-f8bad395e6fe"))
+	(wire (pts (xy 165.1000 99.0600) (xy 167.6400 99.0600)) (stroke (width 0) (type default)) (uuid "f11891f3-c77d-44d4-83a9-4d681a4cbd7d"))
+	(global_label "BTN_E" (shape input) (at 167.6400 99.0600 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "d49c152c-3bf8-43b6-96be-8f214183b2d2"))
+	(wire (pts (xy 165.1000 101.6000) (xy 167.6400 101.6000)) (stroke (width 0) (type default)) (uuid "50849590-8b44-46ab-b798-075db26e9505"))
+	(global_label "BTN_F" (shape input) (at 167.6400 101.6000 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "1a7e9199-e57e-46c0-b2bd-bbaa1293d143"))
+	(wire (pts (xy 165.1000 104.1400) (xy 167.6400 104.1400)) (stroke (width 0) (type default)) (uuid "bec33446-b2cd-425d-addd-8a33bc449ea2"))
+	(global_label "BTN_G" (shape input) (at 167.6400 104.1400 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "750b86c7-3e75-49ec-b65a-2a8a29f29c55"))
+	(wire (pts (xy 165.1000 106.6800) (xy 167.6400 106.6800)) (stroke (width 0) (type default)) (uuid "fa8e1577-9e03-4fd0-ab56-0f1df5a03254"))
+	(global_label "BTN_H" (shape input) (at 167.6400 106.6800 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "555248a4-9e84-4da6-a8b7-aee09ea4228c"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 50.8000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "e8c87c4c-2fe5-48e4-9380-4d255be61575")
+		(property "Reference" "SW1" (at 53.3400 48.2600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_A" (at 53.3400 53.3400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 50.8000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 50.8000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW1") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 50.8000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "bd77d01a-5384-47b5-9a04-316a5526e67e")
+		(property "Reference" "#PWR22" (at 45.7200 46.9900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 52.3000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 50.8000) (xy 53.3400 50.8000)) (stroke (width 0) (type default)) (uuid "84641921-7152-4cae-908e-dfed48dcf945"))
+	(global_label "BTN_A" (shape output) (at 53.3400 50.8000 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "1f528250-492d-4a0f-8cf7-24f22ef831b8"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 50.8000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "4d4e1896-70c8-4e48-b03f-fdc137ae24d3")
+		(property "Reference" "R2" (at 83.8200 48.2600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 53.3400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 50.8000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 50.8000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R2") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 46.9900 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "ec62603a-5a74-41b5-a670-f62390215672")
+		(property "Reference" "#PWR23" (at 81.2800 43.1800 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 48.4900 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 54.6100) (xy 81.2800 57.1500)) (stroke (width 0) (type default)) (uuid "bf70452e-9a90-469b-b619-0f4dfd42d695"))
+	(global_label "BTN_A" (shape input) (at 81.2800 57.1500 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "3d71d10b-d39d-41b2-b644-6c12a182e43b"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 71.1200 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d64795f-6bb7-4322-b387-f516474ab31d")
+		(property "Reference" "SW2" (at 53.3400 68.5800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_B" (at 53.3400 73.6600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 71.1200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 71.1200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW2") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 71.1200 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "78ac38d9-3fe2-4b60-9e03-f32657f16d91")
+		(property "Reference" "#PWR24" (at 45.7200 67.3100 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 72.6200 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 71.1200) (xy 53.3400 71.1200)) (stroke (width 0) (type default)) (uuid "2b0c425f-253a-4045-9f79-b18c74c73e21"))
+	(global_label "BTN_B" (shape output) (at 53.3400 71.1200 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "66471b97-8735-470c-9cf1-6eb205dce115"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 71.1200 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c236bda-9425-4f82-ae53-b5028c362b48")
+		(property "Reference" "R3" (at 83.8200 68.5800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 73.6600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 71.1200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 71.1200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R3") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 67.3100 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "e652769c-ccf0-4fa7-8fa1-d71cdc11615f")
+		(property "Reference" "#PWR25" (at 81.2800 63.5000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 68.8100 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 74.9300) (xy 81.2800 77.4700)) (stroke (width 0) (type default)) (uuid "653b03b2-8c64-4857-84ec-3ed8311d7f77"))
+	(global_label "BTN_B" (shape input) (at 81.2800 77.4700 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "1ce925f2-b5f8-44c7-b4e4-ffba4bd2852a"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 91.4400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "e87e7f04-0ae4-4b60-9cfa-b18c8df7b329")
+		(property "Reference" "SW3" (at 53.3400 88.9000 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_C" (at 53.3400 93.9800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 91.4400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 91.4400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW3") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 91.4400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "0c1f7be7-a05d-4df4-a98c-60a0bd788ed4")
+		(property "Reference" "#PWR26" (at 45.7200 87.6300 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 92.9400 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 91.4400) (xy 53.3400 91.4400)) (stroke (width 0) (type default)) (uuid "cd48012b-60d0-411f-8dc3-2f042e5a81f4"))
+	(global_label "BTN_C" (shape output) (at 53.3400 91.4400 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "646b2db7-c50b-447e-a550-24ca6710d60f"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 91.4400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdf47379-1c93-4468-ad62-9efc812d8ae9")
+		(property "Reference" "R4" (at 83.8200 88.9000 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 93.9800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 91.4400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 91.4400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R4") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 87.6300 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "b45e44dc-51f3-4482-adbe-56571e8ddb5d")
+		(property "Reference" "#PWR27" (at 81.2800 83.8200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 89.1300 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 95.2500) (xy 81.2800 97.7900)) (stroke (width 0) (type default)) (uuid "e8848571-3b73-4587-9807-ce2c7b248a19"))
+	(global_label "BTN_C" (shape input) (at 81.2800 97.7900 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "ea2da3e1-136c-491d-81c6-8a9de9c3e646"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 111.7600 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "313764e1-06ba-4653-a37c-0c9dcf1491dc")
+		(property "Reference" "SW4" (at 53.3400 109.2200 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_D" (at 53.3400 114.3000 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 111.7600 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 111.7600 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW4") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 111.7600 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "09eb43e7-4c77-44ff-8d6f-a0294107e737")
+		(property "Reference" "#PWR28" (at 45.7200 107.9500 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 113.2600 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 111.7600) (xy 53.3400 111.7600)) (stroke (width 0) (type default)) (uuid "dfdf6217-bc37-4e32-9070-66c5d7724b79"))
+	(global_label "BTN_D" (shape output) (at 53.3400 111.7600 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "37be4716-1f70-4c64-8149-2903d9e93bdc"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 111.7600 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "240530a1-d862-4f5d-a504-c7b09b648d9d")
+		(property "Reference" "R5" (at 83.8200 109.2200 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 114.3000 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 111.7600 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 111.7600 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R5") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 107.9500 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "fffb211e-e09d-459d-b465-2878bc421ba8")
+		(property "Reference" "#PWR29" (at 81.2800 104.1400 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 109.4500 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 115.5700) (xy 81.2800 118.1100)) (stroke (width 0) (type default)) (uuid "79becff8-684b-4586-99b4-1a02e422c8ab"))
+	(global_label "BTN_D" (shape input) (at 81.2800 118.1100 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "4613f965-5070-44a9-875f-a98274e2a589"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 132.0800 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "f9b15562-1ded-4026-86b1-d557fb0163ea")
+		(property "Reference" "SW5" (at 53.3400 129.5400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_E" (at 53.3400 134.6200 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 132.0800 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 132.0800 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW5") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 132.0800 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "173e5eb3-0793-40a8-9dc4-69d59090767d")
+		(property "Reference" "#PWR30" (at 45.7200 128.2700 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 133.5800 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 132.0800) (xy 53.3400 132.0800)) (stroke (width 0) (type default)) (uuid "4a97cc21-0125-4187-a67c-4863b690b86e"))
+	(global_label "BTN_E" (shape output) (at 53.3400 132.0800 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "84df0439-a5d8-448f-9e95-92f4911d4101"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 132.0800 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "6102ada8-caf9-47ef-bc78-760e12b57c42")
+		(property "Reference" "R6" (at 83.8200 129.5400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 134.6200 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 132.0800 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 132.0800 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R6") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 128.2700 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "4a1f5b7c-6130-4812-bdd7-8a4214a57b4f")
+		(property "Reference" "#PWR31" (at 81.2800 124.4600 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 129.7700 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 135.8900) (xy 81.2800 138.4300)) (stroke (width 0) (type default)) (uuid "b874f1ed-e5fb-4cd8-a1b4-93f22f643848"))
+	(global_label "BTN_E" (shape input) (at 81.2800 138.4300 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "9dd09618-a42d-481d-aba8-6519ace197ec"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 152.4000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec4fb1ee-ba9c-465d-a7ed-69302b86981c")
+		(property "Reference" "SW6" (at 53.3400 149.8600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_F" (at 53.3400 154.9400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 152.4000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 152.4000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW6") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 152.4000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "ceb369db-3b65-4116-8ff6-b155bd784c72")
+		(property "Reference" "#PWR32" (at 45.7200 148.5900 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 153.9000 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 152.4000) (xy 53.3400 152.4000)) (stroke (width 0) (type default)) (uuid "a7cad268-ac8f-4fea-8596-ad263d517484"))
+	(global_label "BTN_F" (shape output) (at 53.3400 152.4000 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "cdc5b1a8-e8ca-4793-a264-730e00379753"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 152.4000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "1005dae6-43ff-4dee-8253-f1edc4180557")
+		(property "Reference" "R7" (at 83.8200 149.8600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 154.9400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 152.4000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 152.4000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R7") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 148.5900 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "3000653b-9a9b-4f32-b534-ec3df3d93743")
+		(property "Reference" "#PWR33" (at 81.2800 144.7800 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 150.0900 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 156.2100) (xy 81.2800 158.7500)) (stroke (width 0) (type default)) (uuid "cd85797d-fa67-4ceb-a556-9174ae04f309"))
+	(global_label "BTN_F" (shape input) (at 81.2800 158.7500 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "d23fdb76-723a-4901-aa9e-a70181b424a6"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 172.7200 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "d52fb70b-e70e-4422-b18e-db22a285366e")
+		(property "Reference" "SW7" (at 53.3400 170.1800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_G" (at 53.3400 175.2600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 172.7200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 172.7200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW7") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 172.7200 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "85bf08d5-8102-4754-be8c-1e81d3d62f00")
+		(property "Reference" "#PWR34" (at 45.7200 168.9100 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 174.2200 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 172.7200) (xy 53.3400 172.7200)) (stroke (width 0) (type default)) (uuid "eb185a41-80f4-459a-96ee-8e504a85ca65"))
+	(global_label "BTN_G" (shape output) (at 53.3400 172.7200 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "a1bba8e7-a0f8-4da3-ba4b-345d0563e15b"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 172.7200 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d23998b-5130-4a97-94d4-1528a72b70a1")
+		(property "Reference" "R8" (at 83.8200 170.1800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 175.2600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 172.7200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 172.7200 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R8") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 168.9100 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "01559874-4ab3-4588-8ce7-7fa86688629c")
+		(property "Reference" "#PWR35" (at 81.2800 165.1000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 170.4100 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 176.5300) (xy 81.2800 179.0700)) (stroke (width 0) (type default)) (uuid "b9067ef6-54e9-454a-ad29-bf2e030ac74f"))
+	(global_label "BTN_G" (shape input) (at 81.2800 179.0700 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "c7252a6f-9df8-4779-8558-12f494f9af75"))
+	(symbol
+		(lib_id "Switch:SW_Push") (at 50.8000 193.0400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "67480ec3-84f5-4db2-8219-3159f19ba1e4")
+		(property "Reference" "SW8" (at 53.3400 190.5000 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "BTN_H" (at 53.3400 195.5800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 50.8000 193.0400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 50.8000 193.0400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "SW8") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:GND") (at 45.7200 193.0400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "ff62fab2-99f1-43d8-ab9e-43c25e723746")
+		(property "Reference" "#PWR36" (at 45.7200 189.2300 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 45.7200 194.5400 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 55.8800 193.0400) (xy 53.3400 193.0400)) (stroke (width 0) (type default)) (uuid "28a095f7-78cf-4675-b6e1-ca9f5ce2d568"))
+	(global_label "BTN_H" (shape output) (at 53.3400 193.0400 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "852bae99-a837-49ea-8f12-5c6745147715"))
+	(symbol
+		(lib_id "Device:R") (at 81.2800 193.0400 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "b22b014f-a9a7-404b-8068-2dfd2cfeb9e6")
+		(property "Reference" "R9" (at 83.8200 190.5000 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "10k 5% 0402 0.1W" (at 83.8200 195.5800 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 81.2800 193.0400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 81.2800 193.0400 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "R9") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 81.2800 189.2300 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "733e34c9-6c32-4aa2-9ec2-5f4722224439")
+		(property "Reference" "#PWR37" (at 81.2800 185.4200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 81.2800 190.7300 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 81.2800 196.8500) (xy 81.2800 199.3900)) (stroke (width 0) (type default)) (uuid "57dbc7e9-66f8-43b4-9f62-337bea3d2c16"))
+	(global_label "BTN_H" (shape input) (at 81.2800 199.3900 270) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "b623b27e-9bc8-4fa9-adf6-941716291a43"))
+	(symbol
+		(lib_id "Device:C") (at 223.5200 152.4000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd0695a0-3fd6-4ad2-bfe8-bd71ff61158c")
+		(property "Reference" "C2" (at 226.0600 149.8600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "100nF 10% 0402 6.3V X5R" (at 226.0600 154.9400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 223.5200 152.4000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 223.5200 152.4000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/0dc2e7f1-d2e0-4da6-9132-ccc8857bae1f" (reference "C2") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 223.5200 148.5900 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "c022c489-d7af-4a37-9ef5-83b0511ceddb")
+		(property "Reference" "#PWR38" (at 223.5200 144.7800 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 223.5200 150.0900 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:GND") (at 223.5200 156.2100 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "d016af41-f539-4165-bee5-8307fd12f881")
+		(property "Reference" "#PWR39" (at 223.5200 152.4000 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 223.5200 157.7100 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(sheet_instances (path "/" (page "1")))
+	(embedded_fonts no)
+)

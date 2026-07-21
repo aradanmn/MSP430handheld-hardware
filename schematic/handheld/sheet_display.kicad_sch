@@ -1,0 +1,322 @@
+(kicad_sch
+	(version 20250114)
+	(generator "python-script")
+	(generator_version "1.0")
+	(uuid "511e2a34-67b1-4778-85ba-8e5b39f2c794")
+	(paper "B")
+	(title_block
+		(title "MSP430 Handheld — Display")
+		(date "2026-07-21")
+		(rev "20260721-161058")
+		(company "MSP430 Handheld — open hardware")
+		(comment 1 "Main Function: 2.7in SSD1325 OLED (SPI)")
+	)
+	(lib_symbols
+		(symbol "Module:OLED_2674"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no) (in_bom yes) (on_board yes)
+			(property "Reference" "DS" (at 0 8.8900 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "OLED_SSD1325_2674" (at 0 -8.8900 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "OLED_2674_0_1"
+				(rectangle (start -12.7000 6.3500) (end 12.7000 -6.3500)
+					(stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "OLED_2674_1_1"
+				(pin passive line (at -17.7800 3.8100 0) (length 5.08)
+					(name "VIN" (effects (font (size 1.016 1.016))))
+					(number "1" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -17.7800 1.2700 0) (length 5.08)
+					(name "GND" (effects (font (size 1.016 1.016))))
+					(number "2" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -17.7800 -1.2700 0) (length 5.08)
+					(name "SCK" (effects (font (size 1.016 1.016))))
+					(number "3" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at -17.7800 -3.8100 0) (length 5.08)
+					(name "MOSI" (effects (font (size 1.016 1.016))))
+					(number "4" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 17.7800 3.8100 180) (length 5.08)
+					(name "CS" (effects (font (size 1.016 1.016))))
+					(number "5" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 17.7800 1.2700 180) (length 5.08)
+					(name "DC" (effects (font (size 1.016 1.016))))
+					(number "6" (effects (font (size 1.016 1.016)))))
+				(pin passive line (at 17.7800 -1.2700 180) (length 5.08)
+					(name "RST" (effects (font (size 1.016 1.016))))
+					(number "7" (effects (font (size 1.016 1.016)))))
+			)
+		)
+(symbol "power:+3V3"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VCC\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Module:OLED_2674") (at 127.0000 101.6000 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(fields_autoplaced yes)
+		(uuid "2cf6043b-c7b4-4168-b96c-65b208400dfe")
+		(property "Reference" "DS1" (at 129.5400 99.0600 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Value" "Adafruit #2674 SSD1325 OLED" (at 129.5400 104.1400 0) (effects (font (size 1.016 1.016)) (justify left)))
+		(property "Footprint" "" (at 127.0000 101.6000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(property "Datasheet" "" (at 127.0000 101.6000 0) (effects (font (size 1.016 1.016)) (hide yes)))
+		(instances (project "msp430_handheld" (path "/511e2a34-67b1-4778-85ba-8e5b39f2c794/c794d37d-ff6b-4419-ad1f-1f8800f099ab" (reference "DS1") (unit 1))))
+	)
+	(symbol
+		(lib_id "power:+3V3") (at 109.2200 97.7900 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "28d382fa-8969-415f-8aa0-6570356b126e")
+		(property "Reference" "#PWR05" (at 109.2200 93.9800 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "+3V3" (at 109.2200 99.2900 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(symbol
+		(lib_id "power:GND") (at 109.2200 100.3300 0) (unit 1)
+		(exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+		(uuid "fccca7d6-3f10-4c19-b0d4-54faa5f7230d")
+		(property "Reference" "#PWR06" (at 109.2200 96.5200 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Value" "GND" (at 109.2200 101.8300 0) (effects (font (size 1.27 1.27)) (hide yes))))
+	(wire (pts (xy 109.2200 102.8700) (xy 111.7600 102.8700)) (stroke (width 0) (type default)) (uuid "1d59d6ea-7ecc-4cca-8e9a-719edbdbac7f"))
+	(global_label "SCK" (shape input) (at 111.7600 102.8700 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "f872bb25-4185-4481-a440-e8171ab67f13"))
+	(wire (pts (xy 109.2200 105.4100) (xy 111.7600 105.4100)) (stroke (width 0) (type default)) (uuid "d272e87c-049c-4c6c-a20e-c0536241ba6f"))
+	(global_label "MOSI" (shape input) (at 111.7600 105.4100 0) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify left))
+		(uuid "b3e5b32c-8712-4a0b-adc8-48fa36582852"))
+	(wire (pts (xy 144.7800 97.7900) (xy 142.2400 97.7900)) (stroke (width 0) (type default)) (uuid "81d1c7fd-0f6b-40a2-87eb-58561e2075c7"))
+	(global_label "OLED_CS" (shape input) (at 142.2400 97.7900 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "227854ac-6871-466a-b577-cd16285b54cf"))
+	(wire (pts (xy 144.7800 100.3300) (xy 142.2400 100.3300)) (stroke (width 0) (type default)) (uuid "4f03bbc8-f43a-4242-a383-ddb525fbcb91"))
+	(global_label "OLED_DC" (shape input) (at 142.2400 100.3300 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "b44b22ac-f7b8-480d-a6fd-ff613727c27a"))
+	(wire (pts (xy 144.7800 102.8700) (xy 142.2400 102.8700)) (stroke (width 0) (type default)) (uuid "34bb6e37-1d44-4d82-abd2-de3ec26eda84"))
+	(global_label "OLED_RST" (shape input) (at 142.2400 102.8700 180) (fields_autoplaced yes)
+		(effects (font (size 1.016 1.016)) (justify right))
+		(uuid "c43ddecd-5286-435a-9e3f-38455185684d"))
+	(sheet_instances (path "/" (page "1")))
+	(embedded_fonts no)
+)
