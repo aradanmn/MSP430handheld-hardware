@@ -1,65 +1,94 @@
-# Handheld MSP430 Game Boy Clone
+# Handheld MSP430 — Hardware
 
-A DIY handheld game console built around the **MSP430G2553** microcontroller.
+Hardware design for a DIY handheld game console built around the
+**MSP430G2553** microcontroller: bill of materials, breadboard layout, KiCad 9
+schematic, and the engineering design history.
 
-## Hardware
+This repo is the **hardware side** of the project. The firmware and the
+26-lesson MSP430 assembly course that builds it live in the companion
+software repo: **[aradanmn/msp430-handheld](https://github.com/aradanmn/msp430-handheld)**.
+
+## Components
 
 | Component | Part | Purpose |
 |-----------|------|---------|
 | MCU | MSP430G2553 (LaunchPad MSP-EXP430G2) | Main controller |
-| Shift register | SN74HC165N (DIP-16) | 8-button input via SPI |
+| Display | SSD1325 2.7″ OLED, 128×64 grayscale SPI | Video output |
+| SRAM | 23LC1024-I/P (128 KB SPI, DIP-8) | Off-chip framebuffer backing store |
+| Flash | W25Q128 (16 MB SPI, DIP breakout, Adafruit #5634) | Asset / level storage |
+| Shift register | SN74HC165N (DIP-16) | 8-button input over the SPI bus |
 | Audio amp | LM386N-1 (DIP-8) | PWM → speaker |
-| Display | 0.96″ OLED SPI 128×64 | Video output |
+| Speaker | SP-3605, 8 Ω | Audio output |
 | LiPo charger | Adafruit 4410 (USB-C) | Battery charging |
-| Battery | Adafruit 2011 (3.7V 2Ah JST-PH) | Power |
-| Speaker | SP-3605 8Ω | Audio output |
+| Battery | Adafruit 2011 (3.7 V LiPo, JST-PH) | Power |
 
-## Repository Layout
+Full ordering detail: [`bom-structured.md`](bom-structured.md),
+[`bom-flat.md`](bom-flat.md), [`bom-order.csv`](bom-order.csv).
+
+## Bus & pins
+
+All SPI peripherals share the MSP430's **USCI_B0** bus and are selected by
+individual chip-select lines (only one CS low at a time):
+
+| Signal | MSP430 pin |
+|--------|-----------|
+| SCLK | P1.5 (UCB0CLK) |
+| MOSI | P1.7 (UCB0SIMO) |
+| MISO | P1.6 (UCB0SOMI) |
+
+The authoritative per-signal chip-select and control assignments (rev 5.0) are
+in the schematic `title_block` of
+[`schematic/msp430_gameboy.kicad_sch`](schematic/msp430_gameboy.kicad_sch),
+and the per-phase wiring is broken out under [`wiring/`](wiring/).
+
+## Repository layout
 
 ```
 handheld-msp430/
-├── schematic/          KiCad 9 schematic files
-│   └── msp430_gameboy.kicad_sch
-├── breadboard/         Breadboard layout (Elenco 9440)
-│   ├── breadboard_layout.html  (SVG visual)
-│   └── breadboard_guide.md     (wiring reference)
-├── scripts/            Schematic generator scripts
-│   ├── gen_kicad7.py   (current — rev 4.0, grid-aligned)
-│   └── gen_kicad6.py   (prior version)
-├── notes/              Versioned engineering notes (yyyymmdd_HHmmss.md)
-├── logs/               Session conversation logs
-└── README.md
+├── bom-flat.md / bom-structured.md / bom-order.csv   Bill of materials
+├── schematic/     KiCad 9 schematic (rev 5.0) + timestamped snapshots
+├── breadboard/    Elenco 9440 layout — breadboard_layout.html + breadboard_guide.md
+├── scripts/       Schematic generators — gen_kicad7.py (current), gen_kicad6.py (prior)
+├── wiring/        Per-build-phase wiring guides (phase-1 … phase-4)
+├── notes/         Versioned engineering notes (yyyymmdd_HHmmss.md) + SESSION_NOTES.md
+└── logs/          Session conversation logs
 ```
 
-## Connections
+## Build phases
 
-| Signal | MSP430 Pin | Destination |
-|--------|-----------|-------------|
-| SCK | P1.5 | SN74HC165N CLK, OLED CLK |
-| MISO | P1.6 | SN74HC165N QH (serial out) |
-| MOSI | P1.7 | OLED MOSI |
-| SH/LD# | P2.4 | SN74HC165N SH_LD |
-| PWM audio | P1.2 | 1kΩ+100nF → LM386N IN− |
-| ADC | P1.3 | 10kΩ pot wiper |
+Hardware is added incrementally as the course progresses:
 
-## Schematic Generator
+- [`wiring/phase-1-launchpad-only.md`](wiring/phase-1-launchpad-only.md) — bare LaunchPad (Lessons 1–5)
+- [`wiring/phase-2-oled-display.md`](wiring/phase-2-oled-display.md) — OLED + SRAM + Flash on the SPI bus
+- [`wiring/phase-3-buttons-shift-register.md`](wiring/phase-3-buttons-shift-register.md) — 8-button SN74HC165N input
+- [`wiring/phase-4-audio.md`](wiring/phase-4-audio.md) — LM386 amplifier + speaker
 
-The schematic is generated programmatically (not drawn by hand). To regenerate:
+## Schematic
+
+The KiCad 9 schematic is generated programmatically rather than drawn by hand.
 
 ```bash
-python3 scripts/gen_kicad7.py
-# writes schematic/msp430_gameboy.kicad_sch
+python3 scripts/gen_kicad7.py     # writes schematic/msp430_gameboy.kicad_sch
 ```
 
-Requires Python 3 and optionally `kiutils` for validation:
-```bash
-pip install kiutils
-```
+Optional validation: `pip install kiutils`.
+
+- Current: [`schematic/msp430_gameboy.kicad_sch`](schematic/msp430_gameboy.kicad_sch) — rev 5.0 (adds OLED CS/DC/RST, SRAM, Flash)
+- Generator: [`scripts/gen_kicad7.py`](scripts/gen_kicad7.py) (current), `scripts/gen_kicad6.py` (prior)
+- Timestamped snapshots are kept alongside the current file for history.
+
+## Design history
+
+The [`notes/`](notes/) and [`logs/`](logs/) directories hold versioned
+engineering notes and session logs from the breadboard / rev 4.0 bring-up —
+the KiCad 9 format lessons, the grid-alignment debugging that fixed
+"nothing connected", component-position tables, and net lists. Preserved
+verbatim as design history.
 
 ## Status
 
-- [x] DigiKey BOM (~$53)
+- [x] BOM (DigiKey, ~$53 core)
 - [x] Breadboard layout (Elenco 9440, 4-panel)
-- [x] KiCad 9.0.7 schematic — rev 4.0 (grid-aligned, all connections verified)
+- [x] KiCad 9 schematic — rev 5.0 (grid-aligned, connections verified)
 - [ ] PCB layout
-- [ ] Firmware
+- [ ] Enclosure
