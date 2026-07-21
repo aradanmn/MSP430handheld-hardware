@@ -44,7 +44,7 @@ and the per-phase wiring is broken out under [`wiring/`](wiring/).
 ## Repository layout
 
 ```
-handheld-msp430/
+MSP430handheld-hardware/
 ├── bom-flat.md / bom-structured.md / bom-order.csv   Bill of materials
 ├── schematic/     KiCad 9 schematic (rev 5.0) + timestamped snapshots
 ├── breadboard/    Elenco 9440 layout — breadboard_layout.html + breadboard_guide.md
