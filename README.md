@@ -6,7 +6,7 @@ schematic, and the engineering design history.
 
 This repo is the **hardware side** of the project. The firmware and the
 26-lesson MSP430 assembly course that builds it live in the companion
-software repo: **[aradanmn/msp430-handheld](https://github.com/aradanmn/msp430-handheld)**.
+software repo: **[aradanmn/MSP430handheld-firmware](https://github.com/aradanmn/MSP430handheld-firmware)**.
 
 ## Components
 
