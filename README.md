@@ -50,6 +50,7 @@ MSP430handheld-hardware/
 ├── breadboard/    Elenco 9440 layout — breadboard_layout.html + breadboard_guide.md
 ├── scripts/       Schematic generators — gen_kicad7.py (current), gen_kicad6.py (prior)
 ├── wiring/        Per-build-phase wiring guides (phase-1 … phase-4)
+├── datasheets/    Component datasheets + pin-function reference (see its README)
 ├── notes/         Versioned engineering notes (yyyymmdd_HHmmss.md) + SESSION_NOTES.md
 └── logs/          Session conversation logs
 ```
