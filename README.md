@@ -50,6 +50,9 @@ MSP430handheld-hardware/
 ├── breadboard/    Elenco 9440 layout — breadboard_layout.html + breadboard_guide.md
 ├── scripts/       Schematic generators — gen_kicad7.py (current), gen_kicad6.py (prior)
 ├── wiring/        Per-build-phase wiring guides (phase-1 … phase-4)
+├── DESIGN.md      Handheld rev A: carrier PCB + enclosure design, assumptions to check
+├── pcb/           Carrier PCB generator, KiCad board, gerbers/drill/DXF/STEP, DRC report
+├── enclosure/     Parametric OpenSCAD enclosure + STLs
 ├── datasheets/    Component datasheets + pin-function reference (see its README)
 ├── notes/         Versioned engineering notes (yyyymmdd_HHmmss.md) + SESSION_NOTES.md
 └── logs/          Session conversation logs
@@ -91,5 +94,14 @@ verbatim as design history.
 - [x] BOM (DigiKey, ~$53 core)
 - [x] Breadboard layout (Elenco 9440, 4-panel)
 - [x] KiCad 9 schematic — rev 5.0 (grid-aligned, connections verified)
-- [ ] PCB layout
-- [ ] Enclosure
+- [x] PCB layout: rev A carrier board, routed, DRC clean, **not yet fabricated** ([`DESIGN.md`](DESIGN.md))
+- [x] Enclosure: rev A, STLs exported, **not yet printed** ([`DESIGN.md`](DESIGN.md))
+- [ ] Schematic rev 6 to match the PCB (pin map and power stage differ from rev 5.0)
+- [ ] BOM Rev G with the PCB-build parts
+
+## Authorship
+
+The BOM review, the datasheet index, and the rev A PCB and enclosure
+(`DESIGN.md`, `pcb/`, `enclosure/`) were written by Claude (Anthropic's AI
+model) working in Claude Code. Scott Dean set the goals, chose the parts,
+builds and tests the hardware, and reviews and decides what is merged.
