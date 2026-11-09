@@ -2,13 +2,13 @@
 
 | Net | Pins |
 |-----|------|
-| `+3V3` | A1.2, A4.4, C13.1, C3.1, C4.1, C5.1, J5.1, R1.1, R10.1, R11.1, R2.1, R3.1, R4.1, R5.1, R6.1, R7.1, R8.1, R9.1, U2.16, U3.7, U3.8, U4.3, U4.7, U4.8 |
+| `+3V3` | A1.2, A4.4, C1.1, C13.1, C3.1, C4.1, C5.1, J3.2, R1.1, R10.1, R11.1, R12.1, R2.1, R3.1, R4.1, R5.1, R6.1, R7.1, R8.1, R9.1, U1.1, U2.16, U3.7, U3.8, U4.3, U4.7, U4.8 |
 | `+5V` | A3.6, C10.1, C11.1, U5.6 |
 | `AMP_BYP` | C8.1, U5.7 |
 | `AMP_OUT` | C12.1, C9.1, U5.5 |
 | `AUDIO_F` | C6.1, C7.1, R14.2 |
 | `AUDIO_IN` | RV1.2, U5.3 |
-| `AUDIO_PWM` | J6.9, R14.1 |
+| `AUDIO_PWM` | R14.1, U1.12 |
 | `BTN_A` | R8.2, SW8.1, U2.6 |
 | `BTN_B` | R7.2, SW7.1, U2.5 |
 | `BTN_DOWN` | R2.2, SW2.1, U2.12 |
@@ -17,30 +17,28 @@
 | `BTN_SELECT` | R5.2, SW5.1, U2.3 |
 | `BTN_START` | R6.2, SW6.1, U2.4 |
 | `BTN_UP` | R1.2, SW1.1, U2.11 |
-| `FLASH_CS` | J6.2, R11.2, U4.1 |
-| `GND` | A1.1, A1.20, A2.4, A3.2, A3.5, A4.3, C10.2, C11.2, C13.2, C14.2, C3.2, C4.2, C5.2, C6.2, C8.2, D1.1, J1.2, J2.2, J6.1, R16.2, R19.2, RV1.1, SW1.2, SW2.2, SW3.2, SW4.2, SW5.2, SW6.2, SW7.2, SW8.2, SW9.1, U2.10, U2.15, U2.8, U3.4, U4.4, U5.2, U5.4 |
-| `LED1` | J5.2, R17.1 |
+| `FLASH_CS` | R11.2, U1.19, U4.1 |
+| `GND` | A1.1, A1.20, A2.4, A3.2, A3.5, A4.3, C1.2, C10.2, C11.2, C13.2, C14.2, C2.2, C3.2, C4.2, C5.2, C6.2, C8.2, D1.1, J1.2, J2.2, J3.1, R16.2, R19.2, RV1.1, SW1.2, SW2.2, SW3.2, SW4.2, SW5.2, SW6.2, SW7.2, SW8.2, SW9.1, U1.20, U2.10, U2.15, U2.8, U3.4, U4.4, U5.2, U5.4 |
+| `LED1` | R17.1, U1.2 |
 | `LED1_A` | D1.2, R17.2 |
-| `MISO` | J6.7, R13.2, U3.2, U4.2 |
-| `MOSI` | A1.8, J6.6, U3.5, U4.5 |
-| `OLED_CS` | A1.15, J5.8, R9.2 |
-| `OLED_DC` | A1.4, J5.9 |
-| `OLED_RST` | A1.16, J5.10 |
-| `P1.1_RXD` | J5.3 |
-| `P1.2_TXD` | J5.4 |
-| `P1.3` | J5.5 |
-| `P2.7` | J6.3 |
+| `MISO` | R13.2, U1.14, U3.2, U4.2 |
+| `MOSI` | A1.8, U1.15, U3.5, U4.5 |
+| `OLED_CS` | A1.15, R9.2, U1.8 |
+| `OLED_DC` | A1.4, U1.9 |
+| `OLED_RST` | A1.16, U1.10 |
 | `PWR_EN` | A3.3, A4.1, SW9.2 |
-| `RST` | J6.5 |
-| `SCK` | A1.7, J5.7, U2.2, U3.6, U4.6 |
+| `RST` | C2.1, J3.5, R12.2, U1.16 |
+| `RXD` | J3.3, U1.3 |
+| `SCK` | A1.7, U1.7, U2.2, U3.6, U4.6 |
 | `SPK+` | J2.1, R15.2 |
 | `SPK_C` | C9.2, R15.1 |
-| `SRAM_CS` | J6.8, R10.2, U3.1 |
-| `SR_LOAD` | J6.10, U2.1 |
+| `SRAM_CS` | R10.2, U1.13, U3.1 |
+| `SR_LOAD` | U1.11, U2.1 |
 | `SR_QH` | R13.1, U2.9 |
-| `TEST` | J6.4 |
+| `TEST` | J3.6, U1.17 |
+| `TXD` | J3.4, U1.4 |
 | `VBAT` | A2.5, A3.1, A4.2, J1.1, R18.1 |
-| `VBAT_SENSE` | C14.1, J5.6, R18.2, R19.1 |
+| `VBAT_SENSE` | C14.1, R18.2, R19.1, U1.6 |
 | `VOL_HI` | C7.2, RV1.3 |
 | `ZOBEL` | C12.2, R16.1 |
 
@@ -50,6 +48,8 @@
 | A2 | USB-C LiPo charger | back |
 | A3 | 5V boost | back |
 | A4 | 3.3V buck-boost | front |
+| C1 | 100nF | front |
+| C2 | 1nF | front |
 | C3 | 100nF | front |
 | C4 | 100nF | front |
 | C5 | 100nF | front |
@@ -65,8 +65,7 @@
 | D1 | red 3mm | front |
 | J1 | LiPo (JST-PH) | front |
 | J2 | Speaker (solder wires) | back |
-| J5 | LaunchPad J1 | back |
-| J6 | LaunchPad J2 | back |
+| J3 | PROG / UART | back |
 | R1 | 10k | front |
 | R2 | 10k | front |
 | R3 | 10k | front |
@@ -78,6 +77,7 @@
 | R9 | 10k | front |
 | R10 | 10k | front |
 | R11 | 10k | front |
+| R12 | 47k | front |
 | R13 | 1k | front |
 | R14 | 1k | front |
 | R15 | 10R | front |
@@ -95,6 +95,7 @@
 | SW7 | B | front |
 | SW8 | A | front |
 | SW9 | EG1218 power | back |
+| U1 | MSP430G2553IN20 | front |
 | U2 | SN74HC165N | front |
 | U3 | 23LC1024-I/P | front |
 | U4 | W25Q128 (Adafruit #5634) | front |

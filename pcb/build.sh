@@ -25,6 +25,12 @@ echo "== drc"
 "$HERE/kicad.sh" kicad-cli pcb drc --format json --severity-all -o $B/drc.json pcb/$NAME.kicad_pcb
 python3 "$HERE/drc_summary.py" "$HERE/build/drc.json" > "$HERE/DRC.txt" || { cat "$HERE/DRC.txt"; echo "DRC FAILED"; exit 1; }
 cat "$HERE/DRC.txt"
+echo "== schematic (same table as the board) + netlist equivalence"
+"$HERE/kicad.sh" sh -c "
+  python3 scripts/gen_schematic.py schematic/$NAME.kicad_sch &&
+  kicad-cli sch export netlist --format kicadxml -o $B/sch_netlist.xml schematic/$NAME.kicad_sch &&
+  kicad-cli sch export pdf -o schematic/$NAME.pdf schematic/$NAME.kicad_sch" 2>&1 | grep -v -i cvpcb | grep -v "Footprint Library Table" | grep -v "library table" || true
+python3 "$REPO/scripts/check_netlist.py" "$HERE/build/sch_netlist.xml" "$HERE/build/placement.json"
 echo "== outputs"
 "$HERE/kicad.sh" sh -c "
   kicad-cli pcb export gerbers -o pcb/fab/ -l F.Cu,B.Cu,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts pcb/$NAME.kicad_pcb &&

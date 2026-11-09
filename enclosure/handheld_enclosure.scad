@@ -26,7 +26,7 @@ lip_t     = 1.1;
 // ── stack heights ───────────────────────────────────────────────────────────
 front_h   = oled_gap + oled_pcb_t + oled_bezel_h;   // PCB front -> outer face (bezel sits flush)
 face_in   = front_h - face_t;
-back_d    = lp_gap + 1.6 + 2.0;                     // PCB back -> inside of back plate (LaunchPad stack)
+back_d    = 10.5;                                   // PCB back -> inside of back plate (modules on headers are 9.8)
 z_pcb_bk  = -pcb_t;
 z_back_in = z_pcb_bk - back_d;
 z_back_out= z_back_in - back_t;
@@ -42,7 +42,7 @@ led_d        = 3.2;
 boss_d       = 6.5; pilot_d = 2.6;           // M3 x 20 pan-head screws cut their own thread
 screw_d      = 3.4; head_d = 6.2; head_h = 3.0;
 usbc_cut     = [13.0, 7.5];  usbc_z = z_pcb_bk - (2.54 + 1.6 + 1.6);       // charger on a 2.54 header
-lpusb_cut    = [13.0, 8.5];  lpusb_z = z_pcb_bk - lp_gap + 1.5;            // LaunchPad micro-USB
+prog_z       = z_pcb_bk - 1.5;  prog_slot_h = 3.2;                         // J3 right-angle pins
 sw_body_h    = 5.4; sw_act = 2.0; sw_travel = 2.5;                         // EG1218
 spk_ring_h   = 3.0;
 
@@ -108,8 +108,6 @@ module back_shell() {
       }
       // rails that keep the power slider on its axis
       at(pwr_switch_at) for (s = [-1, 1]) translate([-9, s * 4.6 - 0.6, z_back_in - 0.01]) cube([18, 1.2, 2.2]);
-      // pads that stop the LaunchPad backing out of its sockets
-      for (x = [lp_cx - 14, lp_cx + 14]) at([x, lp_top + lp_len / 2]) translate([-3, -3, z_back_in - 0.01]) cube([6, 6, back_d - lp_gap - 1.6 - 0.3]);
     }
     // case screws: clearance + counterbore from outside
     for (s = case_screws) at(s) {
@@ -122,9 +120,8 @@ module back_shell() {
     // USB-C (charger) through the bottom wall
     translate([usb_c_x, -pcb_h, usbc_z]) rotate([90, 0, 0]) translate([0, 0, -2]) linear_extrude(wall + gap + 4)
       offset(2) square([usbc_cut[0] - 4, usbc_cut[1] - 4], center = true);
-    // micro-USB (LaunchPad) through the top wall
-    translate([lp_cx, 0, lpusb_z]) rotate([-90, 0, 0]) translate([0, 0, -2]) linear_extrude(wall + gap + 4)
-      offset(2) square([lpusb_cut[0] - 4, lpusb_cut[1] - 4], center = true);
+    // programming header J3 through the top wall (jumper housings slide in over the pins)
+    translate([prog_at[0], gap + wall / 2, prog_z]) cube([prog_n * 2.54 + 0.8, wall + 2, prog_slot_h], center = true);
     // power slider slot
     at(pwr_switch_at) translate([0, 0, z_back_out - 1]) linear_extrude(back_t + 2)
       square([4 + sw_travel + 0.6, 3.0], center = true);
@@ -183,7 +180,6 @@ module board_model() {
   color("navy") translate([oled_at[0], -oled_at[1] - oled_size[1], oled_gap]) cube([oled_size[0], oled_size[1], oled_pcb_t]);
   color("black") translate([oled_at[0] + oled_bezel[0], -oled_at[1] - oled_bezel[1] - oled_bezel[3], oled_gap + oled_pcb_t]) cube([oled_bezel[2], oled_bezel[3], oled_bezel_h]);
   color("orange") translate([battery[0], -battery[1] - battery[3], 0.5]) cube([battery[2], battery[3], battery[4]]);
-  color("red") translate([lp_cx - lp_w / 2, -lp_top - lp_len, -pcb_t - lp_gap - 1.6]) cube([lp_w, lp_len, 1.6]);
   color("gray") at([speaker[0], speaker[1]]) translate([0, 0, z_back_in]) cylinder(d = speaker[2], h = speaker[3]);
 }
 

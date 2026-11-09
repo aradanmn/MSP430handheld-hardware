@@ -77,7 +77,8 @@ python3 scripts/gen_kicad7.py     # writes schematic/msp430_gameboy.kicad_sch
 
 Optional validation: `pip install kiutils`.
 
-- Current: [`schematic/msp430_gameboy.kicad_sch`](schematic/msp430_gameboy.kicad_sch) — rev 5.0 (adds OLED CS/DC/RST, SRAM, Flash)
+- **PCB (rev 6.0):** [`schematic/msp430_handheld.kicad_sch`](schematic/msp430_handheld.kicad_sch) / [PDF](schematic/msp430_handheld.pdf), MSP430G2553 on board, written by `scripts/gen_schematic.py` as part of `pcb/build.sh`
+- Breadboard (rev 5.0): [`schematic/msp430_gameboy.kicad_sch`](schematic/msp430_gameboy.kicad_sch) — rev 5.0 (adds OLED CS/DC/RST, SRAM, Flash)
 - Generator: [`scripts/gen_kicad7.py`](scripts/gen_kicad7.py) (current), `scripts/gen_kicad6.py` (prior)
 - Timestamped snapshots are kept alongside the current file for history.
 
@@ -96,7 +97,7 @@ verbatim as design history.
 - [x] KiCad 9 schematic — rev 5.0 (grid-aligned, connections verified)
 - [x] PCB layout: rev A carrier board, routed, DRC clean, **not yet fabricated** ([`DESIGN.md`](DESIGN.md))
 - [x] Enclosure: rev A, STLs exported, **not yet printed** ([`DESIGN.md`](DESIGN.md))
-- [ ] Schematic rev 6 to match the PCB (pin map and power stage differ from rev 5.0)
+- [x] Schematic rev 6.0 for the PCB ([`schematic/msp430_handheld.pdf`](schematic/msp430_handheld.pdf)), generated from the same table as the board and checked against it
 - [ ] BOM Rev G with the PCB-build parts
 
 ## Authorship
